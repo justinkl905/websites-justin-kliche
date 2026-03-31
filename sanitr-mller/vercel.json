@@ -13,12 +13,3 @@
     }
   ]
 }
-```
-
-Dann **„Commit changes"** klicken und 1–2 Minuten warten bis Vercel neu deployt.
-
----
-
-Danach nochmal testen:
-```
-https://websites-justin-kliche.vercel.app/sanitaer-mueller
