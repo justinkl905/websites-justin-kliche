@@ -1,0 +1,230 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektro Meier - Elektroinstallation in Halle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-900 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-bolt text-yellow-400 text-2xl mr-2"></i>
+                    <span class="font-bold text-xl">Elektro Meier</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-yellow-400 transition">Startseite</a>
+                    <a href="#services" class="hover:text-yellow-400 transition">Leistungen</a>
+                    <a href="#about" class="hover:text-yellow-400 transition">Über uns</a>
+                    <a href="#contact" class="hover:text-yellow-400 transition">Kontakt</a>
+                    <a href="tel:+493451234567" class="bg-yellow-500 text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+                        <i class="fas fa-phone mr-2"></i>Anrufen
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-800">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:bg-blue-700 rounded">Startseite</a>
+                <a href="#services" class="block px-3 py-2 hover:bg-blue-700 rounded">Leistungen</a>
+                <a href="#about" class="block px-3 py-2 hover:bg-blue-700 rounded">Über uns</a>
+                <a href="#contact" class="block px-3 py-2 hover:bg-blue-700 rounded">Kontakt</a>
+                <a href="tel:+493451234567" class="block px-3 py-2 bg-yellow-500 text-blue-900 font-semibold rounded mt-2">
+                    <i class="fas fa-phone mr-2"></i>+49 345 123 45 67
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <i class="fas fa-bolt text-yellow-400 mr-4"></i>
+                    Elektro Meier
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-200">
+                    Ihr zuverlässiger Partner für Elektroinstallationen in Halle
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+493451234567" class="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-400 transition transform hover:scale-105">
+                        <i class="fas fa-phone mr-2"></i>Jetzt anrufen
+                    </a>
+                    <a href="#contact" class="border-2 border-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition">
+                        <i class="fas fa-envelope mr-2"></i>Kontakt aufnehmen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
+                <p class="text-lg text-gray-600">Professionelle Elektroinstallationen für alle Bereiche</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Hausinstallationen</h3>
+                    <p class="text-gray-600">Komplette Elektroinstallationen für Wohnhäuser, Renovierungen und Neubauten.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Gewerbeinstallationen</h3>
+                    <p class="text-gray-600">Elektrische Anlagen für Büros, Geschäfte und Industriebetriebe.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Reparaturen</h3>
+                    <p class="text-gray-600">Schnelle und zuverlässige Reparaturen aller elektrischen Anlagen.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">LED-Beleuchtung</h3>
+                    <p class="text-gray-600">Moderne LED-Lösungen für energieeffiziente Beleuchtung.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Sicherheitstechnik</h3>
+                    <p class="text-gray-600">Alarmanlagen, Videoüberwachung und Sicherheitsbeleuchtung.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">E-Mobilität</h3>
+                    <p class="text-gray-600">Installation von Wallboxen und Ladestationen für Elektrofahrzeuge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Über Elektro Meier</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Seit über 20 Jahren sind wir Ihr zuverlässiger Partner für alle elektrischen Arbeiten in Halle und Umgebung. 
+                        Unser erfahrenes Team sorgt für sichere und normgerechte Installationen.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Zertifiziert</h4>
+                                <p class="text-gray-600">Meisterbetrieb</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Erfahren</h4>
+                                <p class="text-gray-600">Über 20 Jahre</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Team</h4>
+                                <p class="text-gray-600">Fachkräfte</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-600 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Regional</h4>
+                                <p class="text-gray-600">Halle & Umgebung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-600 p-8 rounded-lg text-white">
+                    <h3 class="text-2xl font-bold mb-6">Warum Elektro Meier?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                            <span>Kostenlose Beratung und Kostenvoranschläge</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                            <span>24/7 Notdienst für Reparaturen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                            <span>Faire Preise und transparente Abrechnung</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                            <span>Garantie auf alle Arbeiten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                            <span>Verwendung hochwertiger Materialien</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Kontakt aufnehmen</h2>
+                <p class="text-lg text-gray-600">Wir sind gerne für Sie da - rufen Sie uns an oder schreiben Sie uns!</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-center p-6 bg-gray-50 rounded-lg">
+                            <div class="bg-blue-600 text-white p-4 rounded-full mr-6">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-lg">Telefon</h4>
+                                <a href="tel:+493451234567" class="text-blue-600 hover:text-blue-800 text-lg">+49 345 123 45 67</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center p-6 bg-gray-50 rounded-lg">
+                            <div class="bg-blue-600 text-white p-4 rounded-full mr-6">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 text-lg">Standort</h4>
+                                <p class="text-gray-600 text-lg">Halle (Saale)</p>
