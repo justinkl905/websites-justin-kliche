@@ -1,25 +1,24 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/:slug",
-      "destination": "/:slug/index.html"
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.+)",
+      "dest": "/$1/index.html"
     }
   ]
 }
 ```
 
-Dann auf **„Commit changes"** klicken.
+Dann **„Commit changes"** klicken und 1–2 Minuten warten bis Vercel neu deployt.
 
 ---
 
-**Schritt 2 – Warten**
-
-Vercel erkennt die neue Datei automatisch und deployt neu – das dauert ca. 1–2 Minuten.
-
----
-
-**Schritt 3 – Link nochmal testen**
-
-Danach die URL nochmal aufrufen:
+Danach nochmal testen:
 ```
 https://websites-justin-kliche.vercel.app/sanitaer-mueller
