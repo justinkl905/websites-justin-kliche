@@ -1,0 +1,25 @@
+{
+  "rewrites": [
+    {
+      "source": "/:slug",
+      "destination": "/:slug/index.html"
+    }
+  ]
+}
+```
+
+Dann auf **„Commit changes"** klicken.
+
+---
+
+**Schritt 2 – Warten**
+
+Vercel erkennt die neue Datei automatisch und deployt neu – das dauert ca. 1–2 Minuten.
+
+---
+
+**Schritt 3 – Link nochmal testen**
+
+Danach die URL nochmal aufrufen:
+```
+https://websites-justin-kliche.vercel.app/sanitaer-mueller
