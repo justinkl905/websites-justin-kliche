@@ -1,0 +1,356 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maurer Genz – Ihr Maurermeisterbetrieb in Dessau</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{opacity:0;transform:translateY(40px);transition:all .8s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.card-hover{transition:transform .3s,box-shadow .3s}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.btn-hover{transition:transform .2s,box-shadow .2s}
+.btn-hover:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+html{scroll-behavior:smooth}
+.nav-scrolled{backdrop-filter:blur(12px)!important;box-shadow:0 2px 20px rgba(0,0,0,.15)!important}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-300" style="background:rgba(30,58,95,0.9)">
+<div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#home" class="text-2xl font-bold" style="font-family:'Playfair Display',serif;color:#e07b39">Maurer Genz</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="#home" class="text-white hover:opacity-80 transition text-sm font-medium">Home</a>
+<a href="#leistungen" class="text-white hover:opacity-80 transition text-sm font-medium">Leistungen</a>
+<a href="#ueber" class="text-white hover:opacity-80 transition text-sm font-medium">Über uns</a>
+<a href="#referenzen" class="text-white hover:opacity-80 transition text-sm font-medium">Referenzen</a>
+<a href="#kontakt" class="text-white hover:opacity-80 transition text-sm font-medium">Kontakt</a>
+<a href="#kontakt" class="btn-hover px-5 py-2 rounded-full text-white font-semibold text-sm" style="background:#e07b39">Jetzt anfragen</a>
+</div>
+<button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+</div>
+<div id="mobileMenu" class="hidden md:hidden px-4 pb-4 flex flex-col gap-3">
+<a href="#home" class="text-white text-sm py-1" onclick="closeMobile()">Home</a>
+<a href="#leistungen" class="text-white text-sm py-1" onclick="closeMobile()">Leistungen</a>
+<a href="#ueber" class="text-white text-sm py-1" onclick="closeMobile()">Über uns</a>
+<a href="#referenzen" class="text-white text-sm py-1" onclick="closeMobile()">Referenzen</a>
+<a href="#kontakt" class="text-white text-sm py-1" onclick="closeMobile()">Kontakt</a>
+<a href="#kontakt" class="btn-hover px-5 py-2 rounded-full text-white font-semibold text-sm text-center" style="background:#e07b39" onclick="closeMobile()">Jetzt anfragen</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://image.pollinations.ai/prompt/professional+mason+bricklayer+craftsman+working+in+germany+building+brick+wall+photorealistic+high+quality+cinematic?width=1400&height=800&nologo=true" alt="Maurer bei der Arbeit" class="w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(30,58,95,0.88) 0%,rgba(30,58,95,0.6) 100%)"></div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-4 text-center" style="animation:fadeInUp 1s ease">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-sm font-semibold text-white" style="background:rgba(224,123,57,0.25);border:1px solid rgba(224,123,57,0.5)">
+<span>🏅</span> Zertifizierter Meisterbetrieb seit 2009
+</div>
+<p class="text-lg md:text-xl font-medium mb-4" style="color:#e07b39">Mauerwerk mit Leidenschaft – Ihr Partner in Dessau</p>
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-900 text-white leading-tight mb-6">Solides Handwerk<br><span style="color:#e07b39">für Ihr Zuhause</span></h1>
+<p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">Von Neubau bis Sanierung – Maurer Genz steht für erstklassige Maurerarbeiten, persönliche Beratung und termingerechte Ausführung in Dessau und Umgebung.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="tel:+493401234567" class="btn-hover inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg" style="background:#e07b39">📞 Jetzt anrufen</a>
+<a href="#leistungen" class="btn-hover inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.3)">Unsere Leistungen</a>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+<svg class="w-6 h-6 text-white opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="py-16" style="background:#1e3a5f">
+<div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="fade-in text-center">
+<div class="text-4xl md:text-5xl font-bold mb-2" style="color:#e07b39;font-family:'Playfair Display',serif">500+</div>
+<p class="text-gray-300 text-sm font-medium">Abgeschlossene Projekte</p>
+</div>
+<div class="fade-in text-center">
+<div class="text-4xl md:text-5xl font-bold mb-2" style="color:#e07b39;font-family:'Playfair Display',serif">15</div>
+<p class="text-gray-300 text-sm font-medium">Jahre Erfahrung</p>
+</div>
+<div class="fade-in text-center">
+<div class="text-4xl md:text-5xl font-bold mb-2" style="color:#e07b39;font-family:'Playfair Display',serif">98%</div>
+<p class="text-gray-300 text-sm font-medium">Zufriedene Kunden</p>
+</div>
+<div class="fade-in text-center">
+<div class="text-4xl md:text-5xl font-bold mb-2" style="color:#e07b39;font-family:'Playfair Display',serif">24h</div>
+<p class="text-gray-300 text-sm font-medium">Notfall-Service</p>
+</div>
+</div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section id="leistungen" class="py-20" style="background:#f8f6f3">
+<div class="max-w-6xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Was wir bieten</p>
+<h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1e3a5f">Unsere Leistungen</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Professionelle Maurerarbeiten aus einer Hand – von der Planung bis zur Fertigstellung.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🧱</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Mauerwerk & Rohbau</h3>
+<p class="text-gray-600 leading-relaxed">Wir errichten tragfähiges Mauerwerk für Neubauten aller Art. Ob Einfamilienhaus oder Gewerbegebäude – bei uns sind Sie in besten Händen.</p>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🏠</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Sanierung & Umbau</h3>
+<p class="text-gray-600 leading-relaxed">Bestandsgebäude verdienen fachgerechte Sanierung. Wir modernisieren Ihr Mauerwerk und führen Umbauten nach aktuellen Standards durch.</p>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🔨</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Putz- & Verblendarbeiten</h3>
+<p class="text-gray-600 leading-relaxed">Hochwertige Putzarbeiten innen und außen sorgen für ein perfektes Finish. Wir arbeiten mit allen gängigen Putzsystemen und Verblendtechniken.</p>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🏗️</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Betonarbeiten</h3>
+<p class="text-gray-600 leading-relaxed">Fundamente, Bodenplatten und Betonwände gehören zu unserem täglichen Geschäft. Wir liefern präzise Betonarbeiten für jedes Bauvorhaben.</p>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🧰</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Abdichtung & Drainage</h3>
+<p class="text-gray-600 leading-relaxed">Feuchte Keller gehören der Vergangenheit an. Unsere Abdichtungslösungen schützen Ihr Gebäude dauerhaft vor Feuchtigkeit und Wasserschäden.</p>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="text-4xl mb-4">🏢</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Natursteinarbeiten</h3>
+<p class="text-gray-600 leading-relaxed">Naturstein verleiht jedem Bauwerk Charakter. Wir setzen Mauern, Einfassungen und Fassaden aus edlen Natursteinen fachgerecht um.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WARUM WIR -->
+<section class="relative py-20 overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://image.pollinations.ai/prompt/mason+bricklayer+handwerk+quality+work+detail+brick+wall+construction+professional+germany+photorealistic?width=1200&height=500&nologo=true" alt="Qualitätsarbeit" class="w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(30,58,95,0.92) 0%,rgba(30,58,95,0.85) 100%)"></div>
+</div>
+<div class="relative z-10 max-w-6xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Ihre Vorteile</p>
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Warum Maurer Genz?</h2>
+<p class="text-gray-300 max-w-2xl mx-auto">Drei gute Gründe, warum Sie uns Ihr Bauprojekt anvertrauen sollten.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="fade-in text-center p-8 rounded-2xl" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12)">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,0.2)">🤝</div>
+<h3 class="text-xl font-bold text-white mb-4">Zuverlässigkeit</h3>
+<p class="text-gray-300 leading-relaxed">Pünktlichkeit und Termintreue sind bei uns keine leeren Versprechen. Wir halten uns an Absprachen und kommunizieren offen über den Baufortschritt. Unsere Kunden schätzen unsere verbindliche Arbeitsweise seit über 15 Jahren.</p>
+</div>
+<div class="fade-in text-center p-8 rounded-2xl" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12)">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,0.2)">⭐</div>
+<h3 class="text-xl font-bold text-white mb-4">Qualität</h3>
+<p class="text-gray-300 leading-relaxed">Jede Mauer, jede Fuge und jeder Putz wird mit höchster Sorgfalt ausgeführt. Wir verwenden ausschließlich geprüfte Materialien namhafter Hersteller. Das Ergebnis: Bauwerke, die Generationen überdauern.</p>
+</div>
+<div class="fade-in text-center p-8 rounded-2xl" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12)">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,0.2)">📍</div>
+<h3 class="text-xl font-bold text-white mb-4">Regionalität</h3>
+<p class="text-gray-300 leading-relaxed">Als Dessauer Betrieb kennen wir die lokalen Bauvorschriften und Gegebenheiten bestens. Kurze Wege bedeuten schnelle Reaktionszeiten für unsere Kunden. Wir sind Teil der Region und engagieren uns für die Gemeinschaft.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROZESS -->
+<section class="py-20" style="background:#f8f6f3">
+<div class="max-w-5xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">So läuft's ab</p>
+<h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1e3a5f">In 3 Schritten zum Ziel</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Unkompliziert, transparent und effizient – so arbeiten wir mit Ihnen zusammen.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="fade-in text-center">
+<div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6" style="background:#e07b39;font-family:'Playfair Display',serif">1</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Kontaktaufnahme</h3>
+<p class="text-gray-600 leading-relaxed">Rufen Sie uns an oder schreiben Sie uns eine Nachricht. Wir melden uns innerhalb von 24 Stunden bei Ihnen zurück und besprechen Ihr Anliegen.</p>
+</div>
+<div class="fade-in text-center">
+<div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6" style="background:#e07b39;font-family:'Playfair Display',serif">2</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Beratung & Planung</h3>
+<p class="text-gray-600 leading-relaxed">Wir kommen zu Ihnen, begutachten die Situation vor Ort und erstellen ein detailliertes Angebot – transparent und fair kalkuliert.</p>
+</div>
+<div class="fade-in text-center">
+<div class="w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold text-white mx-auto mb-6" style="background:#e07b39;font-family:'Playfair Display',serif">3</div>
+<h3 class="text-xl font-bold mb-3" style="color:#1e3a5f">Ausführung</h3>
+<p class="text-gray-600 leading-relaxed">Unser erfahrenes Team setzt Ihr Projekt termingerecht und in höchster Qualität um. Sie lehnen sich zurück – wir kümmern uns um den Rest.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ÜBER UNS -->
+<section id="ueber" class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Wer wir sind</p>
+<h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1e3a5f">Über Maurer Genz</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div class="fade-in">
+<img src="https://image.pollinations.ai/prompt/german+mason+bricklayer+workshop+team+professional+craftsmen+working+together+construction+site+photorealistic?width=800&height=600&nologo=true" alt="Unser Team" class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+</div>
+<div class="fade-in">
+<p class="text-gray-700 leading-relaxed mb-6">Maurer Genz ist ein inhabergeführter Meisterbetrieb mit Sitz in Dessau, der seit 2009 für solides Handwerk und verlässliche Partnerschaft steht. Gegründet von Maurermeister Thomas Genz, hat sich unser Betrieb vom Ein-Mann-Unternehmen zu einem eingespielten Team von acht Fachkräften entwickelt. Unser Anspruch war von Anfang an klar: Qualität, die man sieht und die Bestand hat.</p>
+<p class="text-gray-700 leading-relaxed mb-6">Unser Team besteht aus erfahrenen Gesellen, engagierten Lehrlingen und einem Meister, der bei jedem Projekt selbst mit anpackt. Wir bilden regelmäßig aus und geben unser Wissen an die nächste Generation weiter. Fortbildungen und moderne Arbeitstechniken sind für uns selbstverständlich – denn nur wer am Puls der Zeit arbeitet, liefert erstklassige Ergebnisse.</p>
+<p class="text-gray-700 leading-relaxed">Was uns von anderen unterscheidet? Bei Maurer Genz kennen Sie den Chef persönlich. Wir stehen mit unserem Namen für jedes Bauvorhaben ein – ob kleines Gartenmäuerchen oder kompletter Rohbau. Dessau und die umliegende Region sind unsere Heimat, und genau hier wollen wir mit unserer Arbeit sichtbare Spuren hinterlassen.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- REFERENZEN -->
+<section id="referenzen" class="py-20" style="background:#f8f6f3">
+<div class="max-w-6xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Kundenstimmen</p>
+<h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1e3a5f">Was unsere Kunden sagen</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="flex gap-1 mb-4" style="color:#e07b39">⭐⭐⭐⭐⭐</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Maurer Genz hat unseren Anbau perfekt gemauert. Termingerecht, sauber und zu einem fairen Preis – besser hätten wir es uns nicht wünschen können. Absolute Empfehlung für jeden Bauherren!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold" style="background:#1e3a5f">MK</div>
+<div><p class="font-semibold" style="color:#1e3a5f">Markus Kellner</p><p class="text-sm text-gray-500">Dessau-Roßlau</p></div>
+</div>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="flex gap-1 mb-4" style="color:#e07b39">⭐⭐⭐⭐⭐</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Die Sanierung unseres Kellermauerwerks war eine echte Herausforderung. Herr Genz hat uns hervorragend beraten und die Arbeiten mit großer Sorgfalt ausgeführt. Endlich ist der Keller wieder trocken!"</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold" style="background:#1e3a5f">SB</div>
+<div><p class="font-semibold" style="color:#1e3a5f">Sandra Behrens</p><p class="text-sm text-gray-500">Dessau-Süd</p></div>
+</div>
+</div>
+<div class="fade-in card-hover bg-white rounded-2xl p-8 shadow-lg">
+<div class="flex gap-1 mb-4" style="color:#e07b39">⭐⭐⭐⭐⭐</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Wir haben Maurer Genz für den Rohbau unseres Einfamilienhauses beauftragt. Von der Bodenplatte bis zum letzten Stein – alles top! Das Team war stets freundlich, pünktlich und äußerst kompetent."</p>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold" style="background:#1e3a5f">JW</div>
+<div><p class="font-semibold" style="color:#1e3a5f">Jens & Petra Wolf</p><p class="text-sm text-gray-500">Dessau-Nord</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="py-20 bg-white">
+<div class="max-w-6xl mx-auto px-4">
+<div class="text-center mb-16 fade-in">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Sprechen Sie uns an</p>
+<h2 class="text-3xl md:text-5xl font-bold mb-4" style="color:#1e3a5f">Kontakt aufnehmen</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Wir freuen uns auf Ihr Bauprojekt. Kontaktieren Sie uns für eine unverbindliche Beratung.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div class="fade-in">
+<div class="flex flex-col gap-6 mb-8">
+<a href="tel:+493401234567" class="btn-hover flex items-center gap-4 p-6 rounded-2xl text-white font-semibold text-lg" style="background:#1e3a5f">
+<span class="text-3xl">📞</span>
+<div><p class="text-sm opacity-70">Rufen Sie uns an</p><p class="text-xl">+49 340 1234567</p></div>
+</a>
+<a href="mailto:info@maurer-genz.de" class="btn-hover flex items-center gap-4 p-6 rounded-2xl text-white font-semibold text-lg" style="background:#e07b39">
+<span class="text-3xl">✉️</span>
+<div><p class="text-sm opacity-70">Schreiben Sie uns</p><p class="text-xl">info@maurer-genz.de</p></div>
+</a>
+</div>
+<div class="p-6 rounded-2xl" style="background:#f8f6f3">
+<h4 class="font-bold mb-3" style="color:#1e3a5f">📍 Adresse</h4>
+<p class="text-gray-600 mb-4">Maurer Genz<br>Musterstraße 12<br>06844 Dessau-Roßlau</p>
+<h4 class="font-bold mb-3" style="color:#1e3a5f">🕐 Öffnungszeiten</h4>
+<p class="text-gray-600">Mo – Fr: 7:00 – 17:00 Uhr<br>Sa: 8:00 – 12:00 Uhr<br>So: Geschlossen</p>
+</div>
+</div>
+<div class="fade-in">
+<form class="p-8 rounded-2xl shadow-xl" style="background:#f8f6f3" onsubmit="event.preventDefault();alert('Vielen Dank! Wir melden uns bei Ihnen.')">
+<div class="mb-5">
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Name *</label>
+<input type="text" required placeholder="Ihr vollständiger Name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-2 text-sm" style="focus:border-color:#e07b39">
+</div>
+<div class="mb-5">
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Telefon *</label>
+<input type="tel" required placeholder="+49 123 456789" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-2 text-sm">
+</div>
+<div class="mb-5">
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">E-Mail *</label>
+<input type="email" required placeholder="ihre@email.de" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-2 text-sm">
+</div>
+<div class="mb-6">
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Nachricht *</label>
+<textarea required rows="4" placeholder="Beschreiben Sie Ihr Bauvorhaben..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-2 text-sm resize-none"></textarea>
+</div>
+<button type="submit" class="btn-hover w-full py-4 rounded-xl text-white font-bold text-lg" style="background:#e07b39">Nachricht senden ➤</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#1e3a5f">
+<div class="max-w-6xl mx-auto px-4 py-16">
+<div class="grid md:grid-cols-3 gap-12 mb-12">
+<div>
+<h3 class="text-2xl font-bold mb-4" style="color:#e07b39;font-family:'Playfair Display',serif">Maurer Genz</h3>
+<p class="text-gray-400 leading-relaxed">Ihr zuverlässiger Maurermeisterbetrieb in Dessau. Seit 2009 stehen wir für solides Handwerk und persönliche Betreuung.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Kontakt</h4>
+<p class="text-gray-400 leading-relaxed">Musterstraße 12<br>06844 Dessau-Roßlau<br>Tel: +49 340 1234567<br>info@maurer-genz.de</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Öffnungszeiten</h4>
+<p class="text-gray-400 leading-relaxed">Mo – Fr: 7:00 – 17:00 Uhr<br>Sa: 8:00 – 12:00 Uhr<br>So: Geschlossen</p>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-gray-500 text-sm">© 2025 Maurer Genz. Alle Rechte vorbehalten.</p>
+<div class="flex gap-6">
+<a href="#" class="text-gray-500 hover:text-white transition text-sm">Impressum</a>
+<a href="#" class="text-gray-500 hover:text-white transition text-sm">Datenschutz</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<a href="https://wa.me/493401234567" target="_blank" class="btn-hover w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-xl" style="background:#25d366" title="WhatsApp">💬</a>
+<a href="tel:+493401234567" class="btn-hover w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-xl" style="background:#e07b39" title="Anrufen">📞</a>
+</div>
+
+<script>
+// Sticky nav
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+
+// Mobile menu
+const menuBtn=document.getElementById('menuBtn'),mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden')});
+function closeMobile(){mobileMenu.classList.add('hidden')}
+
+// Fade-in observer
+const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.15});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
+```
