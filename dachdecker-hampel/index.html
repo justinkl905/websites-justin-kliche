@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dachdecker Hampel in Dessau – Ihr Meisterbetrieb für Dachdeckerarbeiten. Über 20 Jahre Erfahrung, zuverlässig und kompetent.">
+<meta name="keywords" content="Dachdecker, Dessau, Dachdeckerarbeiten, Dachsanierung, Dachreparatur, Meisterbetrieb">
+<meta name="author" content="Dachdecker Hampel">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Dachdecker Hampel – Meisterbetrieb in Dessau">
+<meta property="og:description" content="Professionelle Dachdeckerarbeiten in Dessau und Umgebung. Qualität, die Generationen überdauert.">
+<meta property="og:type" content="website">
+<title>Dachdecker Hampel – Meisterbetrieb für Dachdeckerarbeiten in Dessau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+* { font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, .font-display { font-family: 'Playfair Display', serif; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUpStagger1 {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+  40% { transform: translateY(-12px) translateX(-50%); }
+  60% { transform: translateY(-6px) translateX(-50%); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(184, 115, 51, 0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+}
+
+.animate-fade-in-up-delay-3 {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-bounce-scroll {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(44, 62, 80, 0.15);
+}
+
+.btn-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.03);
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #b87333;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.clip-diagonal-reverse {
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+}
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 8rem;
+  line-height: 1;
+  opacity: 0.08;
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #b87333; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9a6229; }
+
+@media (max-width: 768px) {
+  .hero-headline { font-size: 2.5rem !important; }
+  .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%); }
+  .clip-diagonal-reverse { clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%); }
+}
+</style>
+</head>
+<body class="overflow-x-hidden">
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500" style="background-color: transparent;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-lg" style="background-color: #b87333;">H</div>
+        <div>
+          <span class="font-display text-xl font-bold text-white" id="nav-logo-text">Hampel</span>
+          <span class="hidden sm:block text-xs tracking-widest uppercase text-gray-300" id="nav-logo-sub" style="opacity: 0.7;">Dachdeckermeister</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link text-sm font-medium tracking-wide text-white" id="nav-link-home">Home</a>
+        <a href="#leistungen" class="nav-link text-sm font-medium tracking-wide text-white" id="nav-link-1">Leistungen</a>
+        <a href="#ueber-uns" class="nav-link text-sm font-medium tracking-wide text-white" id="nav-link-2">Über uns</a>
+        <a href="#referenzen" class="nav-link text-sm font-medium tracking-wide text-white" id="nav-link-3">Referenzen</a>
+        <a href="#kontakt" class="nav-link text-sm font-medium tracking-wide text-white" id="nav-link-4">Kontakt</a>
+        <a href="#kontakt" class="btn-hover inline-flex items-center px-6 py-2.5 rounded-full text-sm font-semibold text-white transition-all" style="background-color: #b87333;">Jetzt anfragen</a>
+      </div>
+      <button id="mobile-menu-btn" class="lg:hidden text-white p-2">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden" style="background-color: #2c3e50;">
+    <div class="px-6 py-4 space-y-3">
+      <a href="#home" class="block text-white text-base font-medium py-2 border-b border-white/10">Home</a>
+      <a href="#leistungen" class="block text-white text-base font-medium py-2 border-b border-white/10">Leistungen</a>
+      <a href="#ueber-uns" class="block text-white text-base font-medium py-2 border-b border-white/10">Über uns</a>
+      <a href="#referenzen" class="block text-white text-base font-medium py-2 border-b border-white/10">Referenzen</a>
+      <a href="#kontakt" class="block text-white text-base font-medium py-2">Kontakt</a>
+      <a href="#kontakt" class="block text-center py-3 rounded-full text-white font-semibold mt-2" style="background-color: #b87333;">Jetzt anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen flex items-center justify-center clip-diagonal" style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 40%, #3a536b 70%, #2c3e50 100%);">
+  <!-- Overlay pattern -->
+  <div class="absolute inset-0" style="background-image: radial-gradient(circle at 20% 50%, rgba(184,115,51,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(184,115,51,0.05) 0%, transparent 40%);"></div>
+  
+  <!-- Floating Badge -->
+  <div class="absolute top-28 sm:top-32 right-6 sm:right-12 animate-float z-10">
+    <div class="px-5 py-3 rounded-2xl shadow-2xl backdrop-blur-sm" style="background-color: rgba(184, 115, 51, 0.15); border: 1px solid rgba(184, 115, 51, 0.3);">
+      <span class="text-sm font-semibold tracking-wide" style="color: #b87333;">⭐ Meisterbetrieb</span>
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+    <!-- Power Statement -->
+    <div class="animate-fade-in-up">
+      <span class="inline-block px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-widest uppercase mb-8" style="background-color: rgba(184, 115, 51, 0.15); color: #b87333; border: 1px solid rgba(184, 115, 51, 0.25);">
+        Seit über 20 Jahren in Dessau
+      </span>
+    </div>
+    
+    <!-- Hero Headline -->
+    <h1 class="hero-headline font-display font-900 text-white leading-none mb-8 animate-fade-in-up-delay-1" style="font-size: clamp(2.5rem, 7vw, 5.5rem);">
+      Handwerk,<br>
+      <span style="color: #b87333;">das bleibt.</span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delay-2" style="font-weight: 300;">
+      Professionelle Dachdeckerarbeiten mit Meisterhand – für Dächer, die Generationen überdauern. Ihr verlässlicher Partner in Dessau und Umgebung.
+    </p>
+
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up-delay-3">
+      <a href="#kontakt" class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg animate-pulse-glow" style="background-color: #b87333;">
+        <span>Kostenlos beraten lassen</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <a href="tel:+493401234567" class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base transition-all" style="color: #b87333; border: 2px solid rgba(184, 115, 51, 0.4);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <span>+49 340 1234567</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-12 left-1/2 animate-bounce-scroll">
+    <div class="w-8 h-12 rounded-full border-2 flex items-start justify-center pt-2" style="border-color: rgba(184, 115, 51, 0.4);">
+      <div class="w-1.5 h-3 rounded-full" style="background-color: #b87333;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="relative py-20 sm:py-28" style="background-color: #fafafa;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+      <div class="scroll-reveal stagger-1 text-center">
+        <div class="font-display font-800 leading-none mb-2" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #b87333;">500+</div>
+        <div class="text-sm sm:text-base font-medium tracking-wide uppercase" style="color: #2c3e50; opacity: 0.7;">Projekte realisiert</div>
+      </div>
+      <div class="scroll-reveal stagger-2 text-center">
+        <div class="font-display font-800 leading-none mb-2" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #b87333;">23</div>
+        <div class="text-sm sm:text-base font-medium tracking-wide uppercase" style="color: #2c3e50; opacity: 0.7;">Jahre Erfahrung</div>
+      </div>
+      <div class="scroll-reveal stagger-3 text-center">
+        <div class="font-display font-800 leading-none mb-2" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #b87333;">98%</div>
+        <div class="text-sm sm:text-base font-medium tracking-wide uppercase" style="color: #2c3e50; opacity: 0.7;">Zufriedene Kunden</div>
+      </div>
+      <div class="scroll-reveal stagger-4 text-center">
+        <div class="font-display font-800 leading-none mb-2" style="font-size: clamp(2.5rem, 5vw, 4rem); color: #b87333;">100%</div>
+        <div class="text-sm sm:text-base font-medium tracking-wide uppercase" style="color: #2c3e50; opacity: 0.7;">Meister-Qualität</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEISTUNGEN -->
+<section id="leistungen" class="py-24 sm:py-32" style="background-color: #ffffff;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">Was wir für Sie tun</span>
+      <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold mb-6" style="color: #2c3e50;">Unsere Leistungen</h2>
+      <p class="scroll-reveal text-lg leading-relaxed" style="color: #5a6d7e;">Von der kleinen Reparatur bis zur kompletten Dachsanierung – wir bieten Ihnen das gesamte Spektrum professioneller Dachdeckerarbeiten.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="scroll-reveal stagger-1 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🏠</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Dachsanierung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Komplette Dachsanierungen vom Altbau bis zum modernen Gebäude. Wir erneuern Ihr Dach fachgerecht und energieeffizient – für dauerhaften Schutz und Wertsteigerung Ihrer Immobilie.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="scroll-reveal stagger-2 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🔨</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Neueindeckung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Ob Ziegel, Schiefer oder Metall – wir decken Ihr Dach mit hochwertigen Materialien neu ein. Präzise Verarbeitung und sorgfältige Materialauswahl garantieren Langlebigkeit.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="scroll-reveal stagger-3 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🛡️</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Dachabdichtung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Professionelle Abdichtung von Flachdächern und Problemstellen. Wir setzen auf modernste Materialien und bewährte Techniken, damit kein Tropfen mehr durchkommt.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="scroll-reveal stagger-4 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🌡️</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Wärmedämmung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Energieeffiziente Dachdämmung für ein behagliches Wohnklima und niedrigere Heizkosten. Wir beraten Sie zu Fördermöglichkeiten und setzen die optimale Lösung um.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="scroll-reveal stagger-5 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🪟</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Dachfenster</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Einbau und Austausch von Dachfenstern aller führenden Hersteller. Mehr Licht, mehr Luft, mehr Lebensqualität – fachgerecht eingebaut und perfekt abgedichtet.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="scroll-reveal stagger-6 card-hover rounded-2xl p-8 bg-white border" style="border-color: #eee;">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background-color: rgba(184, 115, 51, 0.1);">🔧</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Reparaturen & Notdienst</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Schnelle Hilfe bei Sturmschäden, undichten Stellen oder defekten Dachrinnen. Unser Notdienst ist für Sie da, wenn es darauf ankommt – zuverlässig und zeitnah.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARUM WIR -->
+<section class="py-24 sm:py-32 clip-diagonal-reverse" style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);">
+  <div class="max-w-7xl mx-auto px-6 pt-8 sm:pt-12">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">Warum Dachdecker Hampel</span>
+      <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold text-white mb-6">Was uns<br><span style="color: #b87333;">auszeichnet</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-10 sm:gap-12">
+      <div class="scroll-reveal stagger-1 text-center">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl" style="background-color: rgba(184, 115, 51, 0.15); border: 2px solid rgba(184, 115, 51, 0.25);">🏆</div>
+        <h3 class="font-display text-2xl font-bold text-white mb-4">Meisterliche Qualität</h3>
+        <p class="leading-relaxed" style="color: rgba(255,255,255,0.7);">Jedes Dach wird mit der Präzision und Sorgfalt eines Meisterbetriebs ausgeführt. Wir verwenden ausschließlich geprüfte Markenmaterialien und arbeiten nach den höchsten Standards des Dachdeckerhandwerks.</p>
+      </div>
+      <div class="scroll-reveal stagger-2 text-center">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl" style="background-color: rgba(184, 115, 51, 0.15); border: 2px solid rgba(184, 115, 51, 0.25);">🤝</div>
+        <h3 class="font-display text-2xl font-bold text-white mb-4">Ehrlich & Transparent</h3>
+        <p class="leading-relaxed" style="color: rgba(255,255,255,0.7);">Bei uns gibt es keine versteckten Kosten. Sie erhalten ein faires Angebot, eine klare Zeitplanung und offene Kommunikation. Was wir zusagen, halten wir – darauf können Sie sich verlassen.</p>
+      </div>
+      <div class="scroll-reveal stagger-3 text-center">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl" style="background-color: rgba(184, 115, 51, 0.15); border: 2px solid rgba(184, 115, 51, 0.25);">📍</div>
+        <h3 class="font-display text-2xl font-bold text-white mb-4">Verwurzelt in Dessau</h3>
+        <p class="leading-relaxed" style="color: rgba(255,255,255,0.7);">Als Dessauer Betrieb kennen wir die Bausubstanz, die Witterungsbedingungen und die Menschen unserer Region. Kurze Wege, schnelle Reaktionszeiten und ein Name, der in der Nachbarschaft zählt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROZESS -->
+<section class="py-24 sm:py-32" style="background-color: #fafafa;">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">So arbeiten wir</span>
+      <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold mb-6" style="color: #2c3e50;">In drei Schritten<br>zum neuen Dach</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-12">
+      <div class="scroll-reveal stagger-1 text-center relative">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-2xl font-bold text-white" style="background-color: #b87333;">1</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Beratung & Besichtigung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Wir kommen zu Ihnen, begutachten Ihr Dach und besprechen Ihre Wünsche. Sie erhalten ein detailliertes, transparentes Angebot – kostenfrei und unverbindlich.</p>
+        <!-- Connector -->
+        <div class="hidden md:block absolute top-8 left-full w-full h-0.5" style="background: linear-gradient(to right, #b87333, transparent); transform: translateX(-20px);"></div>
+      </div>
+      <div class="scroll-reveal stagger-2 text-center relative">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-2xl font-bold text-white" style="background-color: #b87333;">2</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Planung & Umsetzung</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Nach Ihrer Freigabe planen wir den Ablauf im Detail und beginnen termingerecht mit der Ausführung. Sauber, effizient und mit Rücksicht auf Ihren Alltag.</p>
+        <div class="hidden md:block absolute top-8 left-full w-full h-0.5" style="background: linear-gradient(to right, #b87333, transparent); transform: translateX(-20px);"></div>
+      </div>
+      <div class="scroll-reveal stagger-3 text-center">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-2xl font-bold text-white" style="background-color: #b87333;">3</div>
+        <h3 class="font-display text-xl font-bold mb-3" style="color: #2c3e50;">Abnahme & Garantie</h3>
+        <p class="leading-relaxed" style="color: #5a6d7e;">Gemeinsame Endabnahme, saubere Übergabe und volle Gewährleistung. Auch danach sind wir für Sie da – als Ihr dauerhafter Partner rund ums Dach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER UNS -->
+<section id="ueber-uns" class="py-24 sm:py-32" style="background-color: #ffffff;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Image Placeholder -->
+      <div class="scroll-reveal">
+        <div class="rounded-3xl overflow-hidden aspect-[4/3] relative" style="background: linear-gradient(135deg, #2c3e50 0%, #3a536b 50%, #b87333 100%);">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
+            <div class="text-6xl mb-4">👷</div>
+            <div class="font-display text-2xl font-bold mb-2">Familie Hampel</div>
+            <div class="text-sm" style="opacity: 0.7;">Meisterbetrieb seit 2001</div>
+          </div>
+          <!-- Corner badge -->
+          <div class="absolute bottom-6 right-6 px-4 py-2 rounded-xl" style="background-color: rgba(184, 115, 51, 0.9);">
+            <span class="text-white text-sm font-semibold">Meisterbetrieb</span>
+          </div>
+        </div>
+      </div>
+      <!-- Text -->
+      <div>
+        <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">Über uns</span>
+        <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold mb-8" style="color: #2c3e50;">Handwerk mit<br>Herzblut</h2>
+        <p class="scroll-reveal text-lg leading-relaxed mb-6" style="color: #5a6d7e;">
+          Als Dachdeckermeisterbetrieb sind wir seit über 23 Jahren fest in Dessau verwurzelt. Was als Ein-Mann-Betrieb begann, ist heute ein eingespieltes Team von Fachleuten, die jeden Tag mit Leidenschaft auf Dessaus Dächer steigen.
+        </p>
+        <p class="scroll-reveal text-lg leading-relaxed mb-8" style="color: #5a6d7e;">
+          Für uns ist jedes Dach mehr als eine Konstruktion – es ist das Versprechen an eine Familie, sicher und trocken zu leben. Dieses Verantwortungsbewusstsein treibt uns an, bei jedem Projekt unser Bestes zu geben.
+        </p>
+        <div class="scroll-reveal grid grid-cols-2 gap-6">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: rgba(184, 115, 51, 0.1);">
+              <svg class="w-5 h-5" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="text-sm font-medium" style="color: #2c3e50;">Innungsmitglied</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: rgba(184, 115, 51, 0.1);">
+              <svg class="w-5 h-5" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="text-sm font-medium" style="color: #2c3e50;">Meisterqualität</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: rgba(184, 115, 51, 0.1);">
+              <svg class="w-5 h-5" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="text-sm font-medium" style="color: #2c3e50;">Festpreisgarantie</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: rgba(184, 115, 51, 0.1);">
+              <svg class="w-5 h-5" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <span class="text-sm font-medium" style="color: #2c3e50;">Regionaler Betrieb</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZEN / TESTIMONIALS -->
+<section id="referenzen" class="py-24 sm:py-32" style="background-color: #fafafa;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">Stimmen unserer Kunden</span>
+      <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold mb-6" style="color: #2c3e50;">Das sagen unsere<br>Kunden über uns</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="scroll-reveal stagger-1 card-hover bg-white rounded-2xl p-8 relative">
+        <div class="quote-mark font-display" style="color: #b87333;">"</div>
+        <div class="relative z-10">
+          <div class="flex items-center gap-1 mb-4">
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+          </div>
+          <p class="leading-relaxed mb-6" style="color: #5a6d7e;">
+            „Herr Hampel und sein Team haben unser Dach in Dessau-Roßlau komplett saniert. Von der Beratung bis zur Endabnahme war alles perfekt organisiert. Das Ergebnis übertrifft unsere Erwartungen – absolute Empfehlung!"
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background-color: #2c3e50;">MK</div>
+            <div>
+              <div class="font-semibold" style="color: #2c3e50;">Michael Krüger</div>
+              <div class="text-sm" style="color: #5a6d7e;">Eigenheimbesitzer, Dessau</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 2 -->
+      <div class="scroll-reveal stagger-2 card-hover bg-white rounded-2xl p-8 relative">
+        <div class="quote-mark font-display" style="color: #b87333;">"</div>
+        <div class="relative z-10">
+          <div class="flex items-center gap-1 mb-4">
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+          </div>
+          <p class="leading-relaxed mb-6" style="color: #5a6d7e;">
+            „Nach dem Sturm brauchten wir dringend Hilfe. Dachdecker Hampel war innerhalb von Stunden vor Ort und hat den Schaden schnell und professionell behoben. So geht Handwerk – zuverlässig und ehrlich im Preis."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background-color: #2c3e50;">SW</div>
+            <div>
+              <div class="font-semibold" style="color: #2c3e50;">Sabine Weber</div>
+              <div class="text-sm" style="color: #5a6d7e;">Hausverwaltung, Dessau</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial 3 -->
+      <div class="scroll-reveal stagger-3 card-hover bg-white rounded-2xl p-8 relative">
+        <div class="quote-mark font-display" style="color: #b87333;">"</div>
+        <div class="relative z-10">
+          <div class="flex items-center gap-1 mb-4">
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+            <span style="color: #b87333;">★</span>
+          </div>
+          <p class="leading-relaxed mb-6" style="color: #5a6d7e;">
+            „Wir haben drei Angebote eingeholt – Hampel war nicht der günstigste, aber der transparenteste. Keine versteckten Kosten, pünktlicher Beginn, Baustelle immer aufgeräumt. Das Dach steht jetzt seit 5 Jahren einwandfrei."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background-color: #2c3e50;">TH</div>
+            <div>
+              <div class="font-semibold" style="color: #2c3e50;">Thomas Hoffmann</div>
+              <div class="text-sm" style="color: #5a6d7e;">Gewerbebau, Bitterfeld</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="py-24 sm:py-32" style="background-color: #ffffff;">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <span class="scroll-reveal inline-block text-xs font-semibold tracking-widest uppercase mb-4" style="color: #b87333;">Kontakt aufnehmen</span>
+      <h2 class="scroll-reveal font-display text-4xl sm:text-5xl font-bold mb-6" style="color: #2c3e50;">Sprechen wir über<br><span style="color: #b87333;">Ihr Dach</span></h2>
+      <p class="scroll-reveal text-lg leading-relaxed" style="color: #5a6d7e;">Ob Frage, Beratung oder Angebot – wir sind für Sie da. Wählen Sie Ihren bevorzugten Kontaktweg.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-3 gap-8">
+      <!-- Anrufen -->
+      <div class="scroll-reveal stagger-1 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(184, 115, 51, 0.2); border: 2px solid rgba(184, 115, 51, 0.3);">
+          <svg class="w-9 h-9" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-white mb-3">Anrufen</h3>
+        <p class="mb-6" style="color: rgba(255,255,255,0.6);">Direkt mit uns sprechen – persönlich und unkompliziert.</p>
+        <a href="tel:+493401234567" class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-white w-full justify-center" style="background-color: #b87333;">
+          +49 340 1234567
+        </a>
+      </div>
+
+      <!-- E-Mail -->
+      <div class="scroll-reveal stagger-2 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, #2c3e50 0%, #1a2a3a 100%);">
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(184, 115, 51, 0.2); border: 2px solid rgba(184, 115, 51, 0.3);">
+          <svg class="w-9 h-9" fill="none" stroke="#b87333" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-white mb-3">E-Mail</h3>
+        <p class="mb-6" style="color: rgba(255,255,255,0.6);">Schreiben Sie uns – wir antworten innerhalb von 24 Stunden.</p>
+        <a href="mailto:info@dachdecker-hampel.de" class="btn-hover inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold w-full justify-center" style="border: 2px solid #b87333; color: #b87333;">
+          E-Mail senden
+        </a>
+      </div>
+
+      <!-- Kontaktformular -->
+      <div class="scroll-reveal stagger-3 card-hover rounded-2xl p-10 lg:row-span-1" style="background-color: #f8f8f8; border: 1px solid #eee;">
+        <h3 class="font-display text-2xl font-bold mb-6" style="color: #2c3e50;">Nachricht senden</h3>
+        <form class="space-y-4" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich bei Ihnen.');">
+          <div>
+            <input type="text" placeholder="Ihr Name *" required class="w-full px-5 py-3.5 rounded-xl bg-white border text-base outline-none transition-all focus:ring-2" style="border-color: #ddd; color: #2c3e50;" onfocus="this.style.borderColor='#b87333'; this.style.boxShadow='0 0 0 3px rgba(184,115,51,0.1)'" onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'">
+          </div>
+          <div>
+            <input type="tel" placeholder="Telefonnummer" class="w-full px-5 py-3.5 rounded-xl bg-white border text-base outline-none transition-all" style="border-color: #ddd; color: #2c3e50;" onfocus="this.style.borderColor='#b87333'; this.style.boxShadow='0 0 0 3px rgba(184,115,51,0.1)'" onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'">
+          </div>
+          <div>
+            <input type="email" placeholder="E-Mail Adresse *" required class="w-full px-5 py-3.5 rounded-xl bg-white border text-base outline-none transition-all" style="border-color: #ddd; color: #2c3e50;" onfocus="this.style.borderColor='#b87333'; this.style.boxShadow='0 0 0 3px rgba(184,115,51,0.1)'" onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'">
+          </div>
+          <div>
+            <textarea rows="4" placeholder="Ihre Nachricht *" required class="w-full px-5 py-3.5 rounded-xl bg-white border text-base outline-none transition-all resize-none" style="border-color: #ddd; color: #2c3e50;" onfocus="this.style.borderColor='#b87333'; this.style.boxShadow='0 0 0 3px rgba(184,115,51,0.1)'" onblur="this.style.borderColor='#ddd'; this.style.boxShadow='none'"></textarea>
+          </div>
+          <button type="submit" class="btn-hover w-full py-4 rounded-xl font-semibold text-white text-base" style="background-color: #b87333;">
+            Nachricht absenden
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background-color: #1a2a3a;">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Firmeninfo -->
+      <div>
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-lg" style="background-color: #b87333;">H</div>
+          <div>
+            <span class="font-display text-xl font-bold text-white">Hampel</span>
+            <span class="block text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.4);">Dachdeckermeister</span>
+          </div>
+        </div>
+        <p class="leading-relaxed text-sm" style="color: rgba(255,255,255,0.5);">
+          Ihr zuverlässiger Dachdecker-Meisterbetrieb in Dessau. Qualität, die Generationen überdauert.
+        </p>
+      </div>
+      <!-- Kontakt -->
+      <div>
+        <h4 class="font-display text-lg font-bold text-white mb-4">Kontakt</h4>
+        <div class="space-y-3 text-sm" style="color: rgba(255,255,255,0.5);">
+          <p>Dachdecker Hampel</p>
+          <p>Musterstraße 12<br>06844 Dessau-Roßlau</p>
+          <p><a href="tel:+493401234567" class="transition-colors hover:text-white">+49 340 1234567</a></p>
+          <p><a href="mailto:info@dachdecker-hampel.de" class="transition-colors hover:text-white">info@dachdecker-hampel.de</a></p>
+        </div>
+      </div>
+      <!-- Öffnungszeiten -->
+      <div>
+        <h4 class="font-display text-lg font-bold text-white mb-4">Öffnungszeiten</h4>
+        <div class="space-y-2 text-sm" style="color: rgba(255,255,255,0.5);">
+          <div class="flex justify-between">
+            <span>Montag – Freitag</span>
+            <span>07:00 – 17:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Samstag</span>
+            <span>08:00 – 13:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Sonntag</span>
+            <span>Geschlossen</span>
+          </div>
+          <p class="pt-2 text-xs" style="color: #b87333;">Notdienst: Rund um die Uhr</p>
+        </div>
+      </div>
+      <!-- Links -->
+      <div>
+        <h4 class="font-display text-lg font-bold text-white mb-4">Rechtliches</h4>
+        <div class="space-y-3 text-sm" style="color: rgba(255,255,255,0.5);">
+          <a href="#" class="block transition-colors hover:text-white">Impressum</a>
+          <a href="#" class="block transition-colors hover:text-white">Datenschutzerklärung</a>
+          <a href="#" class="block transition-colors hover:text-white">AGB</a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom Bar -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4" style="border-top: 1px solid rgba(255,255,255,0.08);">
+      <p class="text-sm" style="color: rgba(255,255,255,0.3);">© 2024 Dachdecker Hampel. Alle Rechte vorbehalten.</p>
+      <p class="text-sm" style="color: rgba(255,255,255,0.3);">Meisterbetrieb in Dessau 🇩🇪</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/493401234567" target="_blank" rel="noopener" class="btn-hover w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform" style="background-color: #25d366;" title="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <!-- Telefon -->
+  <a href="tel:+493401234567" class="btn-hover animate-pulse-glow w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform" style="background-color: #b87333;" title="Jetzt anrufen">
+    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 
