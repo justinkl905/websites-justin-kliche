@@ -1,0 +1,688 @@
+
+
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dachdecker Halle – Ihr Dachdeckermeister in Dessau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(183, 65, 14, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(183, 65, 14, 0); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-on-scroll.visible.delay-1 { transition-delay: 0.1s; }
+        .animate-on-scroll.visible.delay-2 { transition-delay: 0.2s; }
+        .animate-on-scroll.visible.delay-3 { transition-delay: 0.3s; }
+        .animate-on-scroll.visible.delay-4 { transition-delay: 0.4s; }
+        .animate-on-scroll.visible.delay-5 { transition-delay: 0.5s; }
+        .animate-on-scroll.visible.delay-6 { transition-delay: 0.6s; }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-hover {
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .btn-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-hover:active {
+            transform: scale(0.98);
+        }
+
+        .floating-btn {
+            animation: pulse 2s infinite;
+            transition: all 0.3s ease;
+        }
+        .floating-btn:hover {
+            transform: scale(1.15);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #1a1a2e 100%);
+            position: relative;
+        }
+
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 1;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 120px;
+            background: linear-gradient(to top, #ffffff, transparent);
+        }
+
+        .nav-transparent { background: transparent; box-shadow: none; }
+        .nav-solid { background: rgba(26, 26, 46, 0.97); box-shadow: 0 4px 30px rgba(0,0,0,0.15); backdrop-filter: blur(10px); }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #B7410E, #D4652E, #E8913A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .shimmer-text {
+            background: linear-gradient(90deg, #B7410E, #E8913A, #FFD700, #E8913A, #B7410E);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .section-divider {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #B7410E, #D4652E, #B7410E, transparent);
+            border-radius: 2px;
+        }
+
+        .roof-pattern {
+            background: linear-gradient(135deg, #f8f4f0 25%, transparent 25%),
+                        linear-gradient(225deg, #f8f4f0 25%, transparent 25%),
+                        linear-gradient(45deg, #f8f4f0 25%, transparent 25%),
+                        linear-gradient(315deg, #f8f4f0 25%, transparent 25%);
+            background-size: 20px 20px;
+            background-position: 10px 0, 10px 0, 0 0, 0 0;
+        }
+
+        .process-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #B7410E, #D4652E, #E8913A);
+            z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+            .process-line {
+                top: 0; bottom: 0;
+                left: 50%; right: auto;
+                width: 3px; height: 100%;
+                background: linear-gradient(180deg, #B7410E, #D4652E, #E8913A);
+            }
+        }
+
+        .star { color: #FFD700; }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #B7410E;
+            box-shadow: 0 0 0 3px rgba(183, 65, 14, 0.15);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(183, 65, 14, 0.3), 0 0 40px rgba(183, 65, 14, 0.1);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%; transform: translateX(-50%);
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, #B7410E, #E8913A);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== NAVIGATION ===================== -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 nav-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center space-x-2">
+                <span class="text-3xl">🏠</span>
+                <div>
+                    <span class="text-xl font-bold" style="font-family: 'Playfair Display', serif; color: #E8913A;">Dachdecker</span>
+                    <span class="text-xl font-bold" style="font-family: 'Playfair Display', serif; color: #ffffff;"> Halle</span>
+                </div>
+            </a>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-medium transition-colors duration-300" style="color: #e0e0e0;" onmouseover="this.style.color='#E8913A'" onmouseout="this.style.color='#e0e0e0'">Home</a>
+                <a href="#leistungen" class="text-sm font-medium transition-colors duration-300" style="color: #e0e0e0;" onmouseover="this.style.color='#E8913A'" onmouseout="this.style.color='#e0e0e0'">Leistungen</a>
+                <a href="#ueber-uns" class="text-sm font-medium transition-colors duration-300" style="color: #e0e0e0;" onmouseover="this.style.color='#E8913A'" onmouseout="this.style.color='#e0e0e0'">Über uns</a>
+                <a href="#referenzen" class="text-sm font-medium transition-colors duration-300" style="color: #e0e0e0;" onmouseover="this.style.color='#E8913A'" onmouseout="this.style.color='#e0e0e0'">Referenzen</a>
+                <a href="#kontakt" class="text-sm font-medium transition-colors duration-300" style="color: #e0e0e0;" onmouseover="this.style.color='#E8913A'" onmouseout="this.style.color='#e0e0e0'">Kontakt</a>
+                <a href="#kontakt" class="btn-hover inline-block px-6 py-3 rounded-full text-sm font-semibold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                    Jetzt anfragen →
+                </a>
+            </div>
+            <!-- Mobile Burger -->
+            <button id="burger" class="lg:hidden flex flex-col space-y-1.5 p-2" onclick="toggleMenu()">
+                <span class="w-6 h-0.5 rounded transition-all duration-300" style="background-color: #ffffff;" id="line1"></span>
+                <span class="w-6 h-0.5 rounded transition-all duration-300" style="background-color: #ffffff;" id="line2"></span>
+                <span class="w-4 h-0.5 rounded transition-all duration-300" style="background-color: #ffffff;" id="line3"></span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-72 z-50 p-8 lg:hidden" style="background-color: #1a1a2e;">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-2xl" style="color: #ffffff;">✕</button>
+        <div class="mt-16 flex flex-col space-y-6">
+            <a href="#home" onclick="toggleMenu()" class="text-lg font-medium" style="color: #e0e0e0;">Home</a>
+            <a href="#leistungen" onclick="toggleMenu()" class="text-lg font-medium" style="color: #e0e0e0;">Leistungen</a>
+            <a href="#ueber-uns" onclick="toggleMenu()" class="text-lg font-medium" style="color: #e0e0e0;">Über uns</a>
+            <a href="#referenzen" onclick="toggleMenu()" class="text-lg font-medium" style="color: #e0e0e0;">Referenzen</a>
+            <a href="#kontakt" onclick="toggleMenu()" class="text-lg font-medium" style="color: #e0e0e0;">Kontakt</a>
+            <a href="#kontakt" onclick="toggleMenu()" class="btn-hover inline-block px-6 py-3 rounded-full text-sm font-semibold text-center mt-4" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                Jetzt anfragen →
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero-bg min-h-screen flex items-center relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10 w-full">
+        <div class="max-w-3xl">
+            <!-- Badge -->
+            <div class="animate-on-scroll inline-flex items-center px-5 py-2.5 rounded-full mb-8 badge-glow" style="background: rgba(183, 65, 14, 0.15); border: 1px solid rgba(183, 65, 14, 0.4);">
+                <span class="text-sm mr-2">🏅</span>
+                <span class="text-sm font-semibold" style="color: #E8913A;">Meisterbetrieb Dessau</span>
+            </div>
+            <!-- Power Statement -->
+            <p class="animate-on-scroll text-lg font-medium mb-4 tracking-wide uppercase" style="color: #E8913A; letter-spacing: 3px;">
+                Dachdeckerarbeiten mit Meisterhand
+            </p>
+            <!-- Headline -->
+            <h1 class="animate-on-scroll text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6" style="font-family: 'Playfair Display', serif; color: #ffffff;">
+                Ihr zuverlässiger Partner für
+                <span class="shimmer-text"> Dachdeckerarbeiten</span>
+                in Dessau
+            </h1>
+            <!-- Subtext -->
+            <p class="animate-on-scroll text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl" style="color: #b0b8c8;">
+                Persönlich, pünktlich und professionell seit über 15 Jahren. Wir schützen Ihr Zuhause von oben – mit Qualität, die Bestand hat.
+            </p>
+            <!-- Buttons -->
+            <div class="animate-on-scroll flex flex-col sm:flex-row gap-4">
+                <a href="tel:+493401234567" class="btn-hover inline-flex items-center justify-center px-8 py-4 rounded-full text-lg font-semibold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                    <span class="mr-2">📞</span> Jetzt anrufen
+                </a>
+                <a href="#leistungen" class="btn-hover inline-flex items-center justify-center px-8 py-4 rounded-full text-lg font-semibold" style="border: 2px solid rgba(232, 145, 58, 0.5); color: #E8913A; background: rgba(183, 65, 14, 0.08);">
+                    Leistungen entdecken <span class="ml-2">↓</span>
+                </a>
+            </div>
+        </div>
+        <!-- Decorative Roof Element -->
+        <div class="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2" style="opacity: 0.07;">
+            <svg width="400" height="400" viewBox="0 0 400 400" fill="none">
+                <path d="M200 40L380 200H340V360H60V200H20L200 40Z" stroke="white" stroke-width="4" fill="none"/>
+                <path d="M160 360V260H240V360" stroke="white" stroke-width="4" fill="none"/>
+                <path d="M100 180L200 90L300 180" stroke="white" stroke-width="3" fill="none"/>
+            </svg>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="py-16 relative" style="background-color: #ffffff;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <!-- Stat 1 -->
+            <div class="animate-on-scroll delay-1 stat-card relative text-center p-8 rounded-2xl" style="background-color: #faf7f4;">
+                <div class="text-4xl sm:text-5xl font-bold mb-2" style="font-family: 'Playfair Display', serif; color: #B7410E;">500+</div>
+                <p class="text-sm font-medium" style="color: #5a6577;">Abgeschlossene Projekte</p>
+            </div>
+            <!-- Stat 2 -->
+            <div class="animate-on-scroll delay-2 stat-card relative text-center p-8 rounded-2xl" style="background-color: #faf7f4;">
+                <div class="text-4xl sm:text-5xl font-bold mb-2" style="font-family: 'Playfair Display', serif; color: #B7410E;">15</div>
+                <p class="text-sm font-medium" style="color: #5a6577;">Jahre Erfahrung</p>
+            </div>
+            <!-- Stat 3 -->
+            <div class="animate-on-scroll delay-3 stat-card relative text-center p-8 rounded-2xl" style="background-color: #faf7f4;">
+                <div class="text-4xl sm:text-5xl font-bold mb-2" style="font-family: 'Playfair Display', serif; color: #B7410E;">98%</div>
+                <p class="text-sm font-medium" style="color: #5a6577;">Zufriedene Kunden</p>
+            </div>
+            <!-- Stat 4 -->
+            <div class="animate-on-scroll delay-4 stat-card relative text-center p-8 rounded-2xl" style="background-color: #faf7f4;">
+                <div class="text-4xl sm:text-5xl font-bold mb-2" style="font-family: 'Playfair Display', serif; color: #B7410E;">24h</div>
+                <p class="text-sm font-medium" style="color: #5a6577;">Reaktionszeit</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== LEISTUNGEN ===================== -->
+<section id="leistungen" class="py-24" style="background-color: #f8f4f0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #B7410E; letter-spacing: 3px;">Was wir für Sie tun</p>
+            <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Unsere Leistungen</h2>
+            <div class="animate-on-scroll section-divider w-24 mx-auto mb-6"></div>
+            <p class="animate-on-scroll text-lg max-w-2xl mx-auto" style="color: #5a6577;">Vom Neubau bis zur Sanierung – wir bieten Ihnen das komplette Spektrum professioneller Dachdeckerarbeiten aus einer Hand.</p>
+        </div>
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="animate-on-scroll delay-1 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🏗️</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Dacheindeckung</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Ob Ziegel, Schiefer oder Betondachsteine – wir decken Ihr Dach fachgerecht und sicher ein. Dabei berücksichtigen wir Ihre Wünsche zur Optik und Ihr Budget. Eine hochwertige Dacheindeckung schützt Ihr Gebäude jahrzehntelang vor Wind und Wetter.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="animate-on-scroll delay-2 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🔧</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Dachreparatur</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Undichte Stellen, gebrochene Ziegel oder Sturmschäden – wir reparieren Ihr Dach schnell und zuverlässig. Unser erfahrenes Team erkennt Schwachstellen sofort und behebt sie dauerhaft. So vermeiden Sie kostspielige Folgeschäden durch eindringende Feuchtigkeit.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="animate-on-scroll delay-3 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🌡️</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Dachdämmung</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Eine professionelle Dachdämmung senkt Ihre Heizkosten spürbar und verbessert das Wohnklima. Wir verwenden moderne Dämmmaterialien und sorgen für eine lückenlose Verarbeitung. Gleichzeitig erfüllen wir alle aktuellen Vorgaben der Energieeinsparverordnung.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="animate-on-scroll delay-4 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🌧️</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Flachdachabdichtung</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Flachdächer stellen besondere Anforderungen an die Abdichtung. Wir setzen auf bewährte Bitumen- und Kunststoffbahnen für maximalen Schutz. Von der Sanierung bestehender Flachdächer bis zum Neuaufbau – wir garantieren eine dauerhaft dichte Lösung.</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="animate-on-scroll delay-5 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🪟</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Dachfenster-Einbau</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Bringen Sie natürliches Licht unter Ihr Dach mit professionell eingebauten Dachfenstern. Wir beraten Sie zu Größe, Position und Verglasung für optimale Belichtung und Belüftung. Der Einbau erfolgt wasserdicht und wärmebrückenfrei nach Herstellervorgaben.</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="animate-on-scroll delay-6 card-hover rounded-2xl p-8 relative overflow-hidden" style="background-color: #ffffff; border: 1px solid #eee;">
+                <div class="absolute top-0 right-0 w-24 h-24 rounded-bl-full" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.08), rgba(232, 145, 58, 0.05));"></div>
+                <span class="text-4xl mb-5 block">🏡</span>
+                <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Dachrinnen & Entwässerung</h3>
+                <p class="leading-relaxed" style="color: #5a6577;">Eine funktionierende Dachentwässerung ist unverzichtbar für den Schutz Ihres Gebäudes. Wir montieren, reparieren und reinigen Dachrinnen und Fallrohre aus Zink, Kupfer oder Kunststoff. So fließt Regenwasser kontrolliert ab und verursacht keine Schäden an der Fassade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== WARUM WIR ===================== -->
+<section class="py-24" style="background-color: #1a1a2e;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #E8913A; letter-spacing: 3px;">Ihre Vorteile</p>
+            <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Playfair Display', serif; color: #ffffff;">Warum Dachdecker Halle?</h2>
+            <div class="animate-on-scroll section-divider w-24 mx-auto"></div>
+        </div>
+        <!-- USPs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- USP 1 -->
+            <div class="animate-on-scroll delay-1 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.1), rgba(183, 65, 14, 0.03)); border: 1px solid rgba(183, 65, 14, 0.2);">
+                <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                    <span class="text-3xl">⏰</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" style="font-family: 'Playfair Display', serif; color: #ffffff;">Zuverlässigkeit</h3>
+                <p class="leading-relaxed" style="color: #b0b8c8;">Termine einhalten ist für uns selbstverständlich. Sie können sich auf uns verlassen – von der ersten Anfrage bis zur fertigen Ausführung. Kein Stress, keine Überraschungen.</p>
+            </div>
+            <!-- USP 2 -->
+            <div class="animate-on-scroll delay-2 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.1), rgba(183, 65, 14, 0.03)); border: 1px solid rgba(183, 65, 14, 0.2);">
+                <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                    <span class="text-3xl">✨</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" style="font-family: 'Playfair Display', serif; color: #ffffff;">Qualität</h3>
+                <p class="leading-relaxed" style="color: #b0b8c8;">Wir arbeiten ausschließlich mit hochwertigen Materialien und bewährten Methoden. Das Ergebnis überzeugt dauerhaft – das ist unser Anspruch bei jedem Auftrag.</p>
+            </div>
+            <!-- USP 3 -->
+            <div class="animate-on-scroll delay-3 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.1), rgba(183, 65, 14, 0.03)); border: 1px solid rgba(183, 65, 14, 0.2);">
+                <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                    <span class="text-3xl">📍</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-4" style="font-family: 'Playfair Display', serif; color: #ffffff;">Regionalität</h3>
+                <p class="leading-relaxed" style="color: #b0b8c8;">Als lokaler Betrieb aus Dessau kennen wir unsere Kunden persönlich. Kurze Wege, schnelle Reaktion und ein Ansprechpartner, der Sie wirklich kennt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== PROZESS ===================== -->
+<section class="py-24" style="background-color: #ffffff;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #B7410E; letter-spacing: 3px;">In 3 einfachen Schritten</p>
+            <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">So arbeiten wir</h2>
+            <div class="animate-on-scroll section-divider w-24 mx-auto"></div>
+        </div>
+        <!-- Steps -->
+        <div class="relative">
+            <!-- Connecting Line (Desktop) -->
+            <div class="hidden md:block process-line"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                <!-- Step 1 -->
+                <div class="animate-on-scroll delay-1 text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                        <span class="text-2xl font-bold" style="color: #ffffff; font-family: 'Playfair Display', serif;">01</span>
+                    </div>
+                    <div class="rounded-2xl p-8" style="background-color: #faf7f4;">
+                        <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Kontakt</h3>
+                        <p class="leading-relaxed" style="color: #5a6577;">Rufen Sie uns an oder schreiben Sie uns. Wir melden uns innerhalb von 24 Stunden und besprechen Ihr Anliegen.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="animate-on-scroll delay-2 text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                        <span class="text-2xl font-bold" style="color: #ffffff; font-family: 'Playfair Display', serif;">02</span>
+                    </div>
+                    <div class="rounded-2xl p-8" style="background-color: #faf7f4;">
+                        <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Beratung & Angebot</h3>
+                        <p class="leading-relaxed" style="color: #5a6577;">Wir kommen zu Ihnen vor Ort, schauen uns die Situation an und erstellen ein transparentes Angebot ohne versteckte Kosten.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="animate-on-scroll delay-3 text-center">
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                        <span class="text-2xl font-bold" style="color: #ffffff; font-family: 'Playfair Display', serif;">03</span>
+                    </div>
+                    <div class="rounded-2xl p-8" style="background-color: #faf7f4;">
+                        <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Ausführung</h3>
+                        <p class="leading-relaxed" style="color: #5a6577;">Unser erfahrenes Team führt die Arbeiten termingerecht und sauber aus. Nach Abschluss prüfen wir gemeinsam das Ergebnis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== ÜBER UNS ===================== -->
+<section id="ueber-uns" class="py-24" style="background-color: #f8f4f0;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Left: Image Placeholder / Decorative -->
+            <div class="animate-on-scroll">
+                <div class="relative rounded-2xl overflow-hidden" style="background: linear-gradient(135deg, #1a1a2e, #0f3460); min-height: 480px;">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
+                        <span class="text-8xl mb-6">🏠</span>
+                        <h3 class="text-3xl font-bold mb-2" style="font-family: 'Playfair Display', serif; color: #ffffff;">Dachdecker Halle</h3>
+                        <p class="text-lg" style="color: #E8913A;">Meisterbetrieb seit 2009</p>
+                        <div class="mt-8 flex items-center gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold" style="color: #E8913A;">15+</div>
+                                <div class="text-xs" style="color: #b0b8c8;">Jahre</div>
+                            </div>
+                            <div class="w-px h-12" style="background-color: rgba(255,255,255,0.2);"></div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold" style="color: #E8913A;">500+</div>
+                                <div class="text-xs" style="color: #b0b8c8;">Projekte</div>
+                            </div>
+                            <div class="w-px h-12" style="background-color: rgba(255,255,255,0.2);"></div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold" style="color: #E8913A;">100%</div>
+                                <div class="text-xs" style="color: #b0b8c8;">Einsatz</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Text -->
+            <div>
+                <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #B7410E; letter-spacing: 3px;">Über uns</p>
+                <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-8" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Wer steckt hinter Dachdecker Halle?</h2>
+                <div class="animate-on-scroll section-divider w-24 mb-8"></div>
+                <p class="animate-on-scroll text-lg leading-relaxed mb-6" style="color: #5a6577;">
+                    Dachdecker Halle ist ein inhabergeführter Meisterbetrieb aus Dessau. Seit über 15 Jahren vertrauen uns Privatkunden und Gewerbetreibende in der Region. Wir legen großen Wert auf persönliche Beratung, saubere Arbeit und faire Preise.
+                </p>
+                <p class="animate-on-scroll text-lg leading-relaxed mb-8" style="color: #5a6577;">
+                    Unser eingespieltes Team aus erfahrenen Fachkräften arbeitet mit Leidenschaft und Sorgfalt. Ob kleiner Reparaturauftrag oder großes Projekt – wir sind Ihr verlässlicher Partner vor Ort. Kommen Sie auf uns zu, wir freuen uns auf Ihr Vorhaben.
+                </p>
+                <!-- USP Tags -->
+                <div class="animate-on-scroll flex flex-wrap gap-3 mb-8">
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style="background-color: rgba(183, 65, 14, 0.1); color: #B7410E;">🏅 Meisterbetrieb</span>
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style="background-color: rgba(183, 65, 14, 0.1); color: #B7410E;">👨‍👩‍👦 Familienbetrieb</span>
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style="background-color: rgba(183, 65, 14, 0.1); color: #B7410E;">📍 Aus Dessau</span>
+                    <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium" style="background-color: rgba(183, 65, 14, 0.1); color: #B7410E;">⭐ Top bewertet</span>
+                </div>
+                <a href="#kontakt" class="animate-on-scroll btn-hover inline-flex items-center px-8 py-4 rounded-full text-lg font-semibold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                    Lernen Sie uns kennen <span class="ml-2">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== REFERENZEN ===================== -->
+<section id="referenzen" class="py-24" style="background-color: #ffffff;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #B7410E; letter-spacing: 3px;">Kundenstimmen</p>
+            <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Playfair Display', serif; color: #1a1a2e;">Das sagen unsere Kunden</h2>
+            <div class="animate-on-scroll section-divider w-24 mx-auto"></div>
+        </div>
+        <!-- Testimonials -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="animate-on-scroll delay-1 card-hover rounded-2xl p-8 relative" style="background-color: #faf7f4; border: 1px solid #eee;">
+                <div class="absolute top-6 right-8 text-5xl" style="color: rgba(183, 65, 14, 0.1); font-family: 'Playfair Display', serif;">❝</div>
+                <div class="flex items-center mb-1">
+                    <span class="star text-lg">★★★★★</span>
+                </div>
+                <p class="text-sm font-medium mb-5" style="color: #B7410E;">5 von 5 Sternen</p>
+                <p class="leading-relaxed mb-6" style="color: #5a6577;">Sehr zufrieden mit der Arbeit. Alles pünktlich, sauber und zum vereinbarten Preis. Klare Weiterempfehlung. Das gesamte Dach wurde innerhalb einer Woche komplett neu eingedeckt – einwandfreie Arbeit!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 text-lg font-bold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">FS</div>
+                    <div>
+                        <p class="font-semibold" style="color: #1a1a2e;">Familie Schreiber</p>
+                        <p class="text-sm" style="color: #8a94a6;">aus Dessau</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="animate-on-scroll delay-2 card-hover rounded-2xl p-8 relative" style="background-color: #faf7f4; border: 1px solid #eee;">
+                <div class="absolute top-6 right-8 text-5xl" style="color: rgba(183, 65, 14, 0.1); font-family: 'Playfair Display', serif;">❝</div>
+                <div class="flex items-center mb-1">
+                    <span class="star text-lg">★★★★★</span>
+                </div>
+                <p class="text-sm font-medium mb-5" style="color: #B7410E;">5 von 5 Sternen</p>
+                <p class="leading-relaxed mb-6" style="color: #5a6577;">Professionelle Abwicklung von Anfang bis Ende. Zuverlässig, klar kommuniziert und termingerecht. Gerne wieder. Die Flachdachabdichtung unserer Gewerbehalle wurde perfekt umgesetzt.</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 text-lg font-bold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">HM</div>
+                    <div>
+                        <p class="font-semibold" style="color: #1a1a2e;">Herr Möller</p>
+                        <p class="text-sm" style="color: #8a94a6;">Geschäftskunde</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="animate-on-scroll delay-3 card-hover rounded-2xl p-8 relative" style="background-color: #faf7f4; border: 1px solid #eee;">
+                <div class="absolute top-6 right-8 text-5xl" style="color: rgba(183, 65, 14, 0.1); font-family: 'Playfair Display', serif;">❝</div>
+                <div class="flex items-center mb-1">
+                    <span class="star text-lg">★★★★★</span>
+                </div>
+                <p class="text-sm font-medium mb-5" style="color: #B7410E;">5 von 5 Sternen</p>
+                <p class="leading-relaxed mb-6" style="color: #5a6577;">Endlich ein Handwerker, der hält was er verspricht. Tolle Arbeit, fairer Preis und immer erreichbar. Die neuen Dachfenster lassen unser Dachgeschoss in neuem Licht erstrahlen – vielen Dank!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 text-lg font-bold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">FK</div>
+                    <div>
+                        <p class="font-semibold" style="color: #1a1a2e;">Frau Kaufmann</p>
+                        <p class="text-sm" style="color: #8a94a6;">Privatkundin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== KONTAKT ===================== -->
+<section id="kontakt" class="py-24" style="background-color: #1a1a2e;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <p class="animate-on-scroll text-sm font-semibold tracking-widest uppercase mb-3" style="color: #E8913A; letter-spacing: 3px;">Kontakt aufnehmen</p>
+            <h2 class="animate-on-scroll text-3xl sm:text-4xl md:text-5xl font-bold mb-6" style="font-family: 'Playfair Display', serif; color: #ffffff;">Jetzt unverbindlich anfragen</h2>
+            <div class="animate-on-scroll section-divider w-24 mx-auto mb-6"></div>
+            <p class="animate-on-scroll text-lg max-w-2xl mx-auto" style="color: #b0b8c8;">Wir freuen uns auf Ihre Anfrage. Wählen Sie Ihren bevorzugten Kontaktweg – wir melden uns schnellstmöglich bei Ihnen.</p>
+        </div>
+        <!-- Contact Options -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Anruf -->
+            <div class="animate-on-scroll delay-1 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.15), rgba(183, 65, 14, 0.05)); border: 1px solid rgba(183, 65, 14, 0.3);">
+                <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                    <span class="text-3xl">📞</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #ffffff;">Anrufen</h3>
+                <p class="mb-6" style="color: #b0b8c8;">Sprechen Sie direkt mit uns – schnell und persönlich.</p>
+                <a href="tel:+493401234567" class="btn-hover inline-block w-full px-6 py-4 rounded-full text-lg font-semibold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                    +49 340 1234567
+                </a>
+                <p class="mt-4 text-sm" style="color: #8a94a6;">Mo–Fr 07:00–17:00 Uhr</p>
+            </div>
+            <!-- E-Mail -->
+            <div class="animate-on-scroll delay-2 card-hover rounded-2xl p-10 text-center" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.15), rgba(183, 65, 14, 0.05)); border: 1px solid rgba(183, 65, 14, 0.3);">
+                <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6" style="background: linear-gradient(135deg, #B7410E, #D4652E);">
+                    <span class="text-3xl">✉️</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" style="font-family: 'Playfair Display', serif; color: #ffffff;">E-Mail</h3>
+                <p class="mb-6" style="color: #b0b8c8;">Schreiben Sie uns Ihr Anliegen – wir antworten innerhalb von 24 Stunden.</p>
+                <a href="mailto:info@dachdecker-halle.de" class="btn-hover inline-block w-full px-6 py-4 rounded-full text-lg font-semibold" style="border: 2px solid #E8913A; color: #E8913A;">
+                    E-Mail schreiben
+                </a>
+                <p class="mt-4 text-sm" style="color: #8a94a6;">info@dachdecker-halle.de</p>
+            </div>
+            <!-- Kontaktformular -->
+            <div class="animate-on-scroll delay-3 card-hover rounded-2xl p-10" style="background: linear-gradient(135deg, rgba(183, 65, 14, 0.15), rgba(183, 65, 14, 0.05)); border: 1px solid rgba(183, 65, 14, 0.3);">
+                <h3 class="text-2xl font-bold mb-6 text-center" style="font-family: 'Playfair Display', serif; color: #ffffff;">Nachricht senden</h3>
+                <form onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Wir melden uns in Kürze bei Ihnen.');">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Ihr Name" required
+                            class="w-full px-5 py-3 rounded-xl text-sm transition-all duration-300"
+                            style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(183, 65, 14, 0.3); color: #ffffff;">
+                    </div>
+                    <div class="mb-4">
+                        <input type="tel" placeholder="Ihre Telefonnummer" required
+                            class="w-full px-5 py-3 rounded-xl text-sm transition-all duration-300"
+                            style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(183, 65, 14, 0.3); color: #ffffff;">
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" placeholder="Ihre E-Mail-Adresse" required
+                            class="w-full px-5 py-3 rounded-xl text-sm transition-all duration-300"
+                            style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(183, 65, 14, 0.3); color: #ffffff;">
+                    </div>
+                    <div class="mb-5">
+                        <textarea rows="4" placeholder="Ihre Nachricht" required
+                            class="w-full px-5 py-3 rounded-xl text-sm transition-all duration-300 resize-none"
+                            style="background-color: rgba(255,255,255,0.08); border: 1px solid rgba(183, 65, 14, 0.3); color: #ffffff;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-hover w-full px-6 py-4 rounded-full text-lg font-semibold" style="background: linear-gradient(135deg, #B7410E, #D4652E); color: #ffffff;">
+                        Absenden →
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="py-16" style="background-color: #111127;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Col 1: Firma -->
+            <div>
+                <div class="flex items-center space-x-2 mb-5">
+                    <span class="text-2xl">🏠</span>
+                    <div>
+                        <span class="text-lg font-bold" style="font-family: 'Playfair Display', serif; color: #E8913A;">Dachdecker</span>
+                        <span class="text-lg font-bold" style="font-family: 'Playfair Display', serif; color: #ffffff;"> Halle</span>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed" style="color: #8a94a6;">Ihr zuverlässiger Meisterbetrieb für Dachdeckerarbeiten in Dessau und Umgebung. Qualität, die von oben schützt – seit über 15 Jahren.</p>
+            </div>
+            <!-- Col 2: Adresse -->
+            <div>
+                <h4 class="text-lg font-bold mb-5" style="font-family: 'Playfair Display', serif; color: #ffffff;">Adresse</h4>
+                <div class="space-y-3">
+                    <p class="text-sm flex items-start" style="color: #8a94a6;">
+                        <span class="mr-3 mt-0.5">📍</span>
+                        Dachdecker Halle<br>Musterstraße 1<br>06844 Dessau
+                    </p>
