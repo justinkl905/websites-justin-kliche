@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maler Wagner Dessau - Ihr zuverlässiger Partner für Malerarbeiten und Tapezieren</title>
+    <meta name="description" content="Professionelle Malerarbeiten und Tapezieren in Dessau. Maler Wagner - Ihr regionaler Handwerksbetrieb mit über 20 Jahren Erfahrung. Jetzt anfragen!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in-delay-1 {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+        
+        .fade-in-delay-2 {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-900">🎨 Maler Wagner</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#leistungen" class="text-gray-700 hover:text-indigo-600 transition-colors">Leistungen</a>
+                    <a href="#ueber-uns" class="text-gray-700 hover:text-indigo-600 transition-colors">Über uns</a>
+                    <a href="#bewertungen" class="text-gray-700 hover:text-indigo-600 transition-colors">Bewertungen</a>
+                    <a href="#kontakt" class="text-gray-700 hover:text-indigo-600 transition-colors">Kontakt</a>
+                </div>
+                <a href="tel:+493401234567" class="bg-indigo-600 text-white px-4 py-2 rounded-md font-medium hover:bg-indigo-700 btn-hover">
+                    Jetzt anfragen
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-20 pb-16 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Ihr zuverlässiger Partner für<br>
+                    <span class="text-yellow-300">Malerarbeiten in Dessau</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                    Professionelle Malerarbeiten und Tapezieren vom Meisterbetrieb. 
+                    Seit über 20 Jahren vertrauen Kunden in Dessau und Umgebung auf unsere Qualität.
+                </p>
+            </div>
+            <div class="fade-in-delay-1 space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
+                <a href="tel:+493401234567" class="inline-block bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 btn-hover">
+                    📞 Sofort anrufen
+                </a>
+                <a href="#kontakt" class="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 btn-hover">
+                    Kostenloses Angebot
+                </a>
+            </div>
+            <div class="fade-in-delay-2 mt-12 flex justify-center items-center space-x-8 text-sm opacity-80">
+                <div class="flex items-center">
+                    <span class="mr-2">✅</span>
+                    Meisterbetrieb
+                </div>
+                <div class="flex items-center">
+                    <span class="mr-2">✅</span>
+                    20+ Jahre Erfahrung
+                </div>
+                <div class="flex items-center">
+                    <span class="mr-2">✅</span>
+                    Regional verwurzelt
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Unsere Leistungen für Sie
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Von der Beratung bis zur finalen Ausführung – wir sind Ihr kompetenter Partner 
+                    für alle Malerarbeiten in Dessau und Umgebung.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mb-4">🏠</div>
+                    <h3 class="text-xl font-semibold mb-3">Innenraumgestaltung</h3>
+                    <p class="text-gray-600">Wände, Decken und Holzarbeiten im Innenbereich. Fachgerechte Ausführung mit hochwertigen Materialien.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-semibold mb-3">Fassadenanstriche</h3>
+                    <p class="text-gray-600">Professionelle Fassadengestaltung und Schutzanstriche. Wetterbeständig und langlebig.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mb-4">📜</div>
+                    <h3 class="text-xl font-semibold mb-3">Tapezierarbeiten</h3>
+                    <p class="text-gray-600">Vom klassischen Raufaser bis zur Designtapete. Präzise Verarbeitung für perfekte Ergebnisse.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mb-4">🔧</div>
+                    <h3 class="text-xl font-semibold mb-3">Renovierungsarbeiten</h3>
+                    <p class="text-gray-600">Komplette Renovierung Ihrer Räume. Alles aus einer Hand – von der Vorbereitung bis zum Endanstrich.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-semibold mb-3">Lackierarbeiten</h3>
+                    <p class="text-gray-600">Türen, Fenster und Möbel erhalten durch unsere Lackierungen neuen Glanz und optimalen Schutz.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl card-hover">
+                    <div class="text-4ml mb-4">💼</div>
+                    <h3 class="text-xl font-semibold mb-3">Gewerbekunden</h3>
+                    <p class="text-gray-600">Büros, Praxen und Geschäftsräume. Termingerechte Ausführung auch außerhalb der Geschäftszeiten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vorteile -->
+    <section class="py-20 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Warum Maler Wagner?
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Diese Vorteile machen uns zu Ihrem ersten Ansprechpartner in Dessau
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Schneller Service</h3>
+                    <p class="text-gray-600">
+                        Termine binnen 48 Stunden möglich. Bei Notfällen sind wir auch kurzfristig für Sie da.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        💶
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Faire Festpreise</h3>
+                    <p class="text-gray-600">
+                        Transparente Kostenvoranschläge ohne versteckte Kosten. Sie wissen vorher, was Sie bezahlen.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                        🏆
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Meisterqualität</h3>
+                    <p class="text-gray-600">
+                        Über 20 Jahre Erfahrung und Meisterqualifikation garantieren erstklassige Ergebnisse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Ihr Malerbetrieb aus Dessau
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Seit über 20 Jahren bin ich, Meister Thomas Wagner, mit meinem Team 
+                        in Dessau und der Region tätig. Was als kleiner Handwerksbetrieb begann, 
+                        ist heute ein etabliertes Unternehmen mit einem festen Kundenstamm.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Wir kennen die besonderen Anforderungen der Region – von den 
+                        charakteristischen Altbauten bis hin zu modernen Neubauten. 
+                        Dabei legen wir Wert auf handwerkliche Präzision und verwenden 
+                        ausschließlich hochwertige Materialien renommierter Hersteller.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Vertrauen Sie auf einen Betrieb, der in Dessau zu Hause ist 
+                        und Ihre Wünsche mit der nötigen Sorgfalt und Erfahrung umsetzt.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-8 text-white">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🎨</div>
+                        <h3 class="text-2xl font-bold mb-4">Thomas Wagner</h3>
+                        <p class="text-lg opacity-90 mb-6">Malermeister</p>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="mr-3">📍</span>
+                                <span>Ansässig in Dessau</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-3">🏆</span>
+                                <span>Meisterbrief seit 2003</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-3">👥</span>
+                                <span>4 erfahrene Mitarbeiter</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="mr-3">✅</span>
+                                <span>Über 1000 zufriedene Kunden</span>
