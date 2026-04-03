@@ -1,0 +1,221 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dach Schulz - Dachdeckerei Magdeburg | Professionelle Dachlösungen</title>
+    <meta name="description" content="Dach Schulz - Ihre Dachdeckerei in Magdeburg. Professionelle Dacharbeiten, Reparaturen und Neueindeckungen. Rufen Sie uns an: +393912345678">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-home text-red-600 text-2xl mr-3"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Dach Schulz</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#services" class="text-gray-600 hover:text-red-600 transition">Leistungen</a>
+                    <a href="#about" class="text-gray-600 hover:text-red-600 transition">Über uns</a>
+                    <a href="#contact" class="text-gray-600 hover:text-red-600 transition">Kontakt</a>
+                    <a href="tel:+493912345678" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">
+                        <i class="fas fa-phone mr-2"></i>Anrufen
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#services" class="block py-2 text-gray-600 hover:text-red-600 transition">Leistungen</a>
+                <a href="#about" class="block py-2 text-gray-600 hover:text-red-600 transition">Über uns</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-red-600 transition">Kontakt</a>
+                <a href="tel:+493912345678" class="block mt-2 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-center">
+                    <i class="fas fa-phone mr-2"></i>Anrufen
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 bg-gradient-to-br from-red-600 to-red-800 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6">Ihr Dach in besten Händen</h2>
+                    <p class="text-xl mb-8 text-red-100">Seit Jahren vertrauen Kunden in Magdeburg auf unsere professionelle Dachdeckerei. Von Reparaturen bis zur kompletten Neueindeckung - wir sind Ihr zuverlässiger Partner.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="tel:+493912345678" class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
+                            <i class="fas fa-phone mr-2"></i>Jetzt anrufen
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition text-center">
+                            Kostenlos beraten lassen
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4">Schnelle Hilfe</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 mr-3"></i>
+                                <span>24h Notdienst</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 mr-3"></i>
+                                <span>Kostenlose Beratung</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 mr-3"></i>
+                                <span>Faire Preise</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check-circle text-green-300 mr-3"></i>
+                                <span>Garantierte Qualität</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Unsere Leistungen</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Von der Dachreparatur bis zur kompletten Neueindeckung - wir bieten alle Dacharbeiten aus einer Hand.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dachreparaturen</h3>
+                    <p class="text-gray-600 mb-4">Schnelle und professionelle Reparatur von undichten Stellen, beschädigten Ziegeln und anderen Dachschäden.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Leckage-Reparatur</li>
+                        <li>• Ziegel-Austausch</li>
+                        <li>• Sturmschäden</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Neueindeckung</h3>
+                    <p class="text-gray-600 mb-4">Komplette Dachsanierung mit hochwertigen Materialien für langanhaltenden Schutz und moderne Optik.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Ziegeldächer</li>
+                        <li>• Schieferdächer</li>
+                        <li>• Metalldächer</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dachdämmung</h3>
+                    <p class="text-gray-600 mb-4">Energieeffiziente Dämmung für besseren Wärmeschutz und niedrigere Heizkosten.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Aufsparrendämmung</li>
+                        <li>• Zwischensparrendämmung</li>
+                        <li>• Energieberatung</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dachrinnen</h3>
+                    <p class="text-gray-600 mb-4">Installation, Reparatur und Wartung von Dachrinnen und Fallrohren für optimalen Regenwasser-Abfluss.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Rinnen-Installation</li>
+                        <li>• Reparatur & Wartung</li>
+                        <li>• Reinigung</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-window-maximize"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dachfenster</h3>
+                    <p class="text-gray-600 mb-4">Einbau von Dachfenstern und Dachluken für mehr Licht und Belüftung in Ihren Räumen.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• VELUX Dachfenster</li>
+                        <li>• Austausch & Reparatur</li>
+                        <li>• Rollläden & Sonnenschutz</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Notdienst 24/7</h3>
+                    <p class="text-gray-600 mb-4">Bei Sturmschäden oder anderen Notfällen sind wir rund um die Uhr für Sie da.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Sofortmaßnahmen</li>
+                        <li>• Abdichtung</li>
+                        <li>• Schadensbegrenzung</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Warum Dach Schulz?</h2>
+                    <p class="text-lg text-gray-600 mb-6">Als erfahrene Dachdeckerei in Magdeburg stehen wir für Qualität, Zuverlässigkeit und faire Preise. Unser Team aus qualifizierten Handwerkern sorgt dafür, dass Ihr Dach in bestem Zustand ist.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-red-600 text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-award text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Über 20 Jahre Erfahrung</h3>
+                                <p class="text-gray-600">Langjährige Expertise in allen Bereichen der Dachdeckerei</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-red-600 text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Qualifizierte Mitarbeiter</h3>
+                                <p class="text-gray-600">Nur ausgebildete und erfahrene Dachdecker</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-red-600 text-white rounded-full p-2 mr-4">
+                                <i class="fas fa-shield-alt text-sm"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Garantie & Versicherung</h3>
+                                <p class="text-gray-600">Vollversichert mit Garantie auf alle Arbeiten</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Kostenlose Beratung</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Ihr Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Telefonnummer" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="E-Mail Adresse" class="w-full px-4
