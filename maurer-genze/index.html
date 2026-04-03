@@ -1,0 +1,401 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maurer Genze – Ihr Maurermeisterbetrieb in Dessau</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif}
+h1,h2,h3,h4,h5{font-family:'Playfair Display',serif}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.fade-in-up{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.22,1,.36,1)}
+.fade-in-up.visible{opacity:1;transform:translateY(0)}
+.nav-scrolled{background:rgba(30,58,95,.97)!important;backdrop-filter:blur(12px);box-shadow:0 4px 30px rgba(0,0,0,.15)}
+.card-hover{transition:all .4s cubic-bezier(.22,1,.36,1)}
+.card-hover:hover{transform:translateY(-8px);box-shadow:0 20px 60px rgba(30,58,95,.15)}
+.btn-hover{transition:all .3s ease}
+.btn-hover:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(224,123,57,.4)}
+.btn-outline-hover:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(255,255,255,.2)}
+html{scroll-behavior:smooth}
+.gradient-text{background:linear-gradient(135deg,#e07b39,#f4a261);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-bg{background-image:linear-gradient(135deg,rgba(30,58,95,.88)0%,rgba(30,58,95,.75)50%,rgba(30,58,95,.65)100%),url('https://image.pollinations.ai/prompt/professional+craftsman+handwerk+germany+workshop+photorealistic?width=1400&height=800&nologo=true');background-size:cover;background-position:center;background-attachment:fixed}
+.stat-card{backdrop-filter:blur(10px);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)}
+.process-line{position:absolute;top:50%;left:0;right:0;height:2px;background:linear-gradient(90deg,#e07b39,#1e3a5f,#e07b39);z-index:0}
+@media(max-width:768px){.process-line{display:none}.mobile-menu{display:none}.mobile-menu.active{display:flex}}
+.floating-btn{animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(224,123,57,.5)}50%{box-shadow:0 0 0 12px rgba(224,123,57,0)}}
+</style>
+</head>
+<body>
+<nav id="navbar" class="fixed w-full z-50 transition-all duration-500" style="background:transparent">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<a href="#home" class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-lg" style="background:#e07b39">MG</div>
+<span class="text-xl font-bold text-white" style="font-family:'Playfair Display',serif">Maurer Genze</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a href="#home" class="text-white/90 hover:text-white transition text-sm font-medium">Home</a>
+<a href="#leistungen" class="text-white/90 hover:text-white transition text-sm font-medium">Leistungen</a>
+<a href="#ueber-uns" class="text-white/90 hover:text-white transition text-sm font-medium">Über uns</a>
+<a href="#referenzen" class="text-white/90 hover:text-white transition text-sm font-medium">Referenzen</a>
+<a href="#kontakt" class="text-white/90 hover:text-white transition text-sm font-medium">Kontakt</a>
+<a href="#kontakt" class="px-6 py-2.5 rounded-full text-white text-sm font-semibold btn-hover" style="background:#e07b39">Jetzt anfragen</a>
+</div>
+<button id="mobileToggle" class="md:hidden text-white" onclick="document.getElementById('mobileMenu').classList.toggle('active')">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+</div>
+<div id="mobileMenu" class="mobile-menu flex-col gap-4 pb-6 md:hidden">
+<a href="#home" class="text-white/90 hover:text-white transition text-sm font-medium py-2">Home</a>
+<a href="#leistungen" class="text-white/90 hover:text-white transition text-sm font-medium py-2">Leistungen</a>
+<a href="#ueber-uns" class="text-white/90 hover:text-white transition text-sm font-medium py-2">Über uns</a>
+<a href="#referenzen" class="text-white/90 hover:text-white transition text-sm font-medium py-2">Referenzen</a>
+<a href="#kontakt" class="text-white/90 hover:text-white transition text-sm font-medium py-2">Kontakt</a>
+<a href="#kontakt" class="px-6 py-2.5 rounded-full text-white text-sm font-semibold text-center" style="background:#e07b39">Jetzt anfragen</a>
+</div>
+</div>
+</nav>
+<section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full" style="background:radial-gradient(ellipse at 30% 50%,rgba(224,123,57,.1),transparent 70%)"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 fade-in-up" style="background:rgba(224,123,57,.2);border:1px solid rgba(224,123,57,.4)">
+<span style="color:#e07b39">🏆</span>
+<span class="text-sm font-semibold" style="color:#e07b39">Zertifizierter Meisterbetrieb seit 2009</span>
+</div>
+<p class="text-lg md:text-xl font-medium mb-4 fade-in-up" style="color:rgba(255,255,255,.8)">Solides Handwerk. Starke Fundamente.</p>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-6 fade-in-up" style="font-family:'Playfair Display',serif">
+Ihr <span class="gradient-text">Maurermeister</span> für Dessau und Umgebung
+</h1>
+<p class="text-lg md:text-xl mb-10 leading-relaxed fade-in-up" style="color:rgba(255,255,255,.75)">
+Von der Grundsteinlegung bis zur finalen Fuge – wir bauen mit Leidenschaft, Präzision und über 15 Jahren Erfahrung. Maurer Genze steht für Handwerk, dem Sie vertrauen können.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 fade-in-up">
+<a href="#kontakt" class="px-8 py-4 rounded-full text-white text-lg font-semibold btn-hover text-center" style="background:#e07b39">
+Kostenlos beraten lassen →
+</a>
+<a href="tel:+493401234567" class="px-8 py-4 rounded-full text-white text-lg font-semibold btn-outline-hover text-center" style="border:2px solid rgba(255,255,255,.4);background:rgba(255,255,255,.05)">
+📞 +49 340 1234567
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-32" style="background:linear-gradient(to top,#f8f9fa,transparent)"></div>
+</section>
+<section class="relative -mt-16 z-20 pb-16">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<div class="stat-card rounded-2xl p-6 md:p-8 text-center card-hover fade-in-up" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">
+<div class="text-3xl md:text-5xl font-bold text-white mb-2" style="font-family:'Playfair Display',serif">500+</div>
+<div class="text-sm md:text-base" style="color:rgba(255,255,255,.7)">Projekte realisiert</div>
+</div>
+<div class="stat-card rounded-2xl p-6 md:p-8 text-center card-hover fade-in-up" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">
+<div class="text-3xl md:text-5xl font-bold mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">15+</div>
+<div class="text-sm md:text-base" style="color:rgba(255,255,255,.7)">Jahre Erfahrung</div>
+</div>
+<div class="stat-card rounded-2xl p-6 md:p-8 text-center card-hover fade-in-up" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">
+<div class="text-3xl md:text-5xl font-bold text-white mb-2" style="font-family:'Playfair Display',serif">98%</div>
+<div class="text-sm md:text-base" style="color:rgba(255,255,255,.7)">Zufriedene Kunden</div>
+</div>
+<div class="stat-card rounded-2xl p-6 md:p-8 text-center card-hover fade-in-up" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">
+<div class="text-3xl md:text-5xl font-bold mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">24h</div>
+<div class="text-sm md:text-base" style="color:rgba(255,255,255,.7)">Schneller Service</div>
+</div>
+</div>
+</div>
+</section>
+<section id="leistungen" class="py-20 md:py-28" style="background:#f8f9fa">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.1);color:#e07b39">Unsere Leistungen</span>
+<h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Kompetenz in jedem Stein</h2>
+<p class="text-lg max-w-2xl mx-auto" style="color:#5a6a7a">Von Neubau bis Sanierung – wir bieten Ihnen das komplette Leistungsspektrum eines modernen Maurerbetriebs.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🧱</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Rohbau & Neubau</h3>
+<p style="color:#5a6a7a;line-height:1.7">Vom Fundament bis zum Dachstuhl errichten wir Ihren Rohbau mit höchster Präzision und bewährten Materialien. Ob Einfamilienhaus oder Gewerbeimmobilie – wir schaffen die Basis für Ihr Bauprojekt.</p>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🏠</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Sanierung & Umbau</h3>
+<p style="color:#5a6a7a;line-height:1.7">Wir hauchen alten Gebäuden neues Leben ein und setzen Umbauprojekte fachgerecht um. Durchbrüche, Aufstockungen und Grundrissänderungen gehören zu unseren täglichen Herausforderungen.</p>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🔨</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Putz- & Verblendarbeiten</h3>
+<p style="color:#5a6a7a;line-height:1.7">Saubere Putzarbeiten innen und außen verleihen Ihrem Gebäude den perfekten Abschluss. Wir verarbeiten Kalk-, Zement- und Lehmputze für ein gesundes und ansprechendes Raumklima.</p>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🏗️</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Betonarbeiten</h3>
+<p style="color:#5a6a7a;line-height:1.7">Ob Bodenplatten, Streifenfundamente oder Stahlbetondecken – wir beherrschen alle Betonarbeiten aus einer Hand. Qualitätsbeton und fachgerechte Bewehrung garantieren langfristige Stabilität.</p>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🧰</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Abdichtung & Drainage</h3>
+<p style="color:#5a6a7a;line-height:1.7">Feuchte Keller und nasse Wände gehören der Vergangenheit an. Wir führen professionelle Kellerabdichtungen, Horizontalsperren und Drainagesysteme fachgerecht aus.</p>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="text-4xl mb-4">🌿</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Garten- & Landschaftsbau</h3>
+<p style="color:#5a6a7a;line-height:1.7">Mauern, Pfeiler, Stützmauern und Pflasterarbeiten verschönern Ihren Außenbereich nachhaltig. Wir gestalten Terrassen, Einfahrten und Gartenmauern nach Ihren individuellen Wünschen.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28" style="background:#1e3a5f">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.2);color:#e07b39">Warum Maurer Genze</span>
+<h2 class="text-3xl md:text-5xl font-bold text-white mb-6" style="font-family:'Playfair Display',serif">Was uns auszeichnet</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8 md:gap-12">
+<div class="text-center fade-in-up">
+<div class="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,.15);border:1px solid rgba(224,123,57,.3)">🤝</div>
+<h3 class="text-2xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif">Zuverlässigkeit</h3>
+<p class="leading-relaxed" style="color:rgba(255,255,255,.7)">Wenn wir einen Termin zusagen, dann halten wir ihn – ohne Wenn und Aber. Unsere Kunden schätzen unsere Pünktlichkeit und die transparente Kommunikation während des gesamten Projekts. Zuverlässigkeit ist für uns keine Tugend, sondern selbstverständlicher Bestandteil unserer Arbeitsweise und der Grundpfeiler jeder erfolgreichen Zusammenarbeit.</p>
+</div>
+<div class="text-center fade-in-up">
+<div class="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,.15);border:1px solid rgba(224,123,57,.3)">⭐</div>
+<h3 class="text-2xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif">Qualität</h3>
+<p class="leading-relaxed" style="color:rgba(255,255,255,.7)">Jeder Stein wird bei uns mit Sorgfalt gesetzt, jede Fuge sauber ausgearbeitet und jedes Detail beachtet. Als Meisterbetrieb arbeiten wir ausschließlich nach den höchsten handwerklichen Standards und verwenden nur geprüfte Materialien. Das Ergebnis sind Bauwerke, die Generationen überdauern und unseren Kunden langfristig Freude bereiten.</p>
+</div>
+<div class="text-center fade-in-up">
+<div class="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6" style="background:rgba(224,123,57,.15);border:1px solid rgba(224,123,57,.3)">📍</div>
+<h3 class="text-2xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif">Regionalität</h3>
+<p class="leading-relaxed" style="color:rgba(255,255,255,.7)">Wir sind in Dessau verwurzelt und kennen die regionalen Gegebenheiten, Bauvorschriften und klimatischen Anforderungen genauestens. Als lokaler Betrieb sind wir schnell vor Ort und pflegen persönliche Beziehungen zu unseren Kunden und Partnern. Wir stärken die regionale Wirtschaft und arbeiten bevorzugt mit Lieferanten und Handwerkern aus der Umgebung zusammen.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 md:py-28" style="background:#f8f9fa">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.1);color:#e07b39">So arbeiten wir</span>
+<h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">In 3 Schritten zu Ihrem Projekt</h2>
+</div>
+<div class="relative">
+<div class="hidden md:block process-line"></div>
+<div class="grid md:grid-cols-3 gap-8 relative z-10">
+<div class="text-center fade-in-up">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 shadow-lg" style="background:#e07b39;font-family:'Playfair Display',serif">1</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Kontaktaufnahme</h3>
+<p style="color:#5a6a7a;line-height:1.7">Rufen Sie uns an oder schreiben Sie uns eine Nachricht. Wir nehmen uns Zeit für Ihr Anliegen und vereinbaren zeitnah einen kostenlosen Besichtigungstermin bei Ihnen vor Ort.</p>
+</div>
+<div class="text-center fade-in-up">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 shadow-lg" style="background:#e07b39;font-family:'Playfair Display',serif">2</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Beratung & Angebot</h3>
+<p style="color:#5a6a7a;line-height:1.7">Wir besprechen gemeinsam Ihre Wünsche, analysieren die Gegebenheiten und erstellen Ihnen ein detailliertes, transparentes Angebot – fair kalkuliert und ohne versteckte Kosten.</p>
+</div>
+<div class="text-center fade-in-up">
+<div class="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-6 shadow-lg" style="background:#e07b39;font-family:'Playfair Display',serif">3</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Ausführung</h3>
+<p style="color:#5a6a7a;line-height:1.7">Unser erfahrenes Team setzt Ihr Projekt termingerecht und in höchster Qualität um. Regelmäßige Abstimmungen sorgen dafür, dass das Ergebnis exakt Ihren Vorstellungen entspricht.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ueber-uns" class="py-20 md:py-28 bg-white">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.1);color:#e07b39">Über uns</span>
+<h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Tradition trifft Moderne</h2>
+</div>
+<div class="space-y-6 fade-in-up">
+<p class="text-lg leading-relaxed" style="color:#4a5568">
+Maurer Genze wurde vor über 15 Jahren in Dessau gegründet und hat sich seither als einer der führenden Maurerbetriebe in der Region Dessau-Roßlau und ganz Sachsen-Anhalt etabliert. Was mit einer kleinen Werkstatt und einer großen Vision begann, ist heute ein leistungsstarkes Unternehmen mit einem engagierten Team erfahrener Fachkräfte. Unser Gründer und Maurermeister hat sein Handwerk von der Pike auf gelernt und gibt seine Leidenschaft für präzises, ehrliches Maurerhandwerk an jedes Teammitglied weiter.
+</p>
+<p class="text-lg leading-relaxed" style="color:#4a5568">
+Unsere Philosophie ist einfach: Wir bauen so, als wäre es unser eigenes Zuhause. Dieser Anspruch spiegelt sich in jedem Detail unserer Arbeit wider – von der sorgfältigen Materialauswahl über die penible Ausführung bis hin zur finalen Qualitätskontrolle. Wir investieren kontinuierlich in die Weiterbildung unseres Teams und in modernste Werkzeuge und Techniken, um unseren Kunden stets die bestmögliche Leistung zu bieten. Dabei vergessen wir nie, was gutes Handwerk im Kern ausmacht: Erfahrung, Sorgfalt und den Blick fürs Wesentliche.
+</p>
+<p class="text-lg leading-relaxed" style="color:#4a5568">
+Wir sind stolz darauf, in Dessau und Umgebung ein verlässlicher Partner für Bauherren, Architekten und Hausverwaltungen zu sein. Viele unserer Kunden vertrauen uns seit Jahren immer wieder ihre Projekte an – vom kleinen Reparaturauftrag bis zum kompletten Neubau. Diese Treue ist für uns der größte Beweis, dass wir mit unserer Arbeit überzeugen. Wenn auch Sie einen Maurerbetrieb suchen, der Handschlagqualität noch lebt, dann sind Sie bei Maurer Genze genau richtig.
+</p>
+</div>
+</div>
+</section>
+<section id="referenzen" class="py-20 md:py-28" style="background:#f8f9fa">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.1);color:#e07b39">Referenzen</span>
+<h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Das sagen unsere Kunden</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="flex gap-1 mb-4">
+<span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span>
+</div>
+<p class="mb-6 leading-relaxed" style="color:#4a5568">"Das Team von Maurer Genze hat unseren Anbau in Rekordzeit und in herausragender Qualität fertiggestellt. Die Kommunikation war stets transparent und freundlich – wir würden jederzeit wieder mit ihnen bauen."</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:#1e3a5f">FS</div>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Familie Schneider</div>
+<div class="text-sm" style="color:#8a95a5">Neubau Einfamilienhaus, Dessau</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="flex gap-1 mb-4">
+<span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span>
+</div>
+<p class="mb-6 leading-relaxed" style="color:#4a5568">"Pünktlich, sauber und absolut professionell. Die Kellerabdichtung wurde perfekt ausgeführt und seitdem haben wir keinerlei Feuchtigkeitsprobleme mehr. Ein wirklich erstklassiger Handwerksbetrieb, den ich uneingeschränkt empfehle."</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:#e07b39">TM</div>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Thomas Müller</div>
+<div class="text-sm" style="color:#8a95a5">Kellerabdichtung, Roßlau</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl p-8 card-hover fade-in-up" style="border:1px solid #e8ecf0">
+<div class="flex gap-1 mb-4">
+<span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span><span style="color:#e07b39">★</span>
+</div>
+<p class="mb-6 leading-relaxed" style="color:#4a5568">"Als Hausverwaltung arbeiten wir regelmäßig mit Maurer Genze zusammen und sind jedes Mal begeistert. Zuverlässig, fair in der Preisgestaltung und die handwerkliche Qualität ist durchweg erstklassig."</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:#1e3a5f">KW</div>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Katrin Weber</div>
+<div class="text-sm" style="color:#8a95a5">Hausverwaltung Weber GmbH</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="kontakt" class="py-20 md:py-28 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4" style="background:rgba(224,123,57,.1);color:#e07b39">Kontakt</span>
+<h2 class="text-3xl md:text-5xl font-bold mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Lassen Sie uns sprechen</h2>
+<p class="text-lg max-w-2xl mx-auto" style="color:#5a6a7a">Kontaktieren Sie uns für eine unverbindliche Beratung. Wir freuen uns auf Ihr Projekt.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<div class="space-y-6 fade-in-up">
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="tel:+493401234567" class="flex-1 flex items-center justify-center gap-3 px-8 py-5 rounded-2xl text-white text-lg font-semibold btn-hover" style="background:#1e3a5f">
+<span class="text-2xl">📞</span> Jetzt anrufen
+</a>
+<a href="mailto:info@maurer-genze.de" class="flex-1 flex items-center justify-center gap-3 px-8 py-5 rounded-2xl text-white text-lg font-semibold btn-hover" style="background:#e07b39">
+<span class="text-2xl">✉️</span> E-Mail senden
+</a>
+</div>
+<div class="rounded-2xl p-8" style="background:#f8f9fa;border:1px solid #e8ecf0">
+<h3 class="text-xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Kontaktdaten</h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="text-xl mt-0.5">📍</span>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Adresse</div>
+<div style="color:#5a6a7a">Handwerkerstraße 12, 06844 Dessau-Roßlau</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-xl mt-0.5">📞</span>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Telefon</div>
+<div style="color:#5a6a7a">+49 340 1234567</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-xl mt-0.5">✉️</span>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">E-Mail</div>
+<div style="color:#5a6a7a">info@maurer-genze.de</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="text-xl mt-0.5">🕐</span>
+<div>
+<div class="font-semibold" style="color:#1e3a5f">Öffnungszeiten</div>
+<div style="color:#5a6a7a">Mo–Fr: 7:00–17:00 Uhr<br>Sa: 8:00–12:00 Uhr</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="fade-in-up">
+<form class="rounded-2xl p-8 space-y-5" style="background:#f8f9fa;border:1px solid #e8ecf0">
+<h3 class="text-xl font-bold mb-2" style="font-family:'Playfair Display',serif;color:#1e3a5f">Nachricht senden</h3>
+<div>
+<label class="block text-sm font-medium mb-1.5" style="color:#1e3a5f">Name *</label>
+<input type="text" placeholder="Ihr vollständiger Name" required class="w-full px-4 py-3 rounded-xl bg-white text-base outline-none transition" style="border:2px solid #e8ecf0;color:#1e3a5f" onfocus="this.style.borderColor='#e07b39'" onblur="this.style.borderColor='#e8ecf0'">
+</div>
+<div>
+<label class="block text-sm font-medium mb-1.5" style="color:#1e3a5f">Telefon</label>
+<input type="tel" placeholder="Ihre Telefonnummer" class="w-full px-4 py-3 rounded-xl bg-white text-base outline-none transition" style="border:2px solid #e8ecf0;color:#1e3a5f" onfocus="this.style.borderColor='#e07b39'" onblur="this.style.borderColor='#e8ecf0'">
+</div>
+<div>
+<label class="block text-sm font-medium mb-1.5" style="color:#1e3a5f">E-Mail *</label>
+<input type="email" placeholder="Ihre E-Mail-Adresse" required class="w-full px-4 py-3 rounded-xl bg-white text-base outline-none transition" style="border:2px solid #e8ecf0;color:#1e3a5f" onfocus="this.style.borderColor='#e07b39'" onblur="this.style.borderColor='#e8ecf0'">
+</div>
+<div>
+<label class="block text-sm font-medium mb-1.5" style="color:#1e3a5f">Nachricht *</label>
+<textarea rows="4" placeholder="Beschreiben Sie kurz Ihr Anliegen..." required class="w-full px-4 py-3 rounded-xl bg-white text-base outline-none transition resize-none" style="border:2px solid #e8ecf0;color:#1e3a5f" onfocus="this.style.borderColor='#e07b39'" onblur="this.style.borderColor='#e8ecf0'"></textarea>
+</div>
+<button type="submit" class="w-full px-8 py-4 rounded-xl text-white text-lg font-semibold btn-hover" style="background:#e07b39">
+Nachricht absenden →
+</button>
+<p class="text-xs text-center" style="color:#8a95a5">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer style="background:#1e3a5f">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid md:grid-cols-4 gap-10">
+<div class="md:col-span-2">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-white text-lg" style="background:#e07b39">MG</div>
+<span class="text-xl font-bold text-white" style="font-family:'Playfair Display',serif">Maurer Genze</span>
+</div>
+<p class="mb-4 leading-relaxed" style="color:rgba(255,255,255,.6)">Ihr zuverlässiger Maurermeisterbetrieb in Dessau. Qualitätshandwerk seit über 15 Jahren – von der Grundsteinlegung bis zur letzten Fuge.</p>
+<p style="color:rgba(255,255,255,.6)">Handwerkerstraße 12<br>06844 Dessau-Roßlau<br>+49 340 1234567<br>info@maurer-genze.de</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4" style="font-family:'Playfair Display',serif">Öffnungszeiten</h4>
+<div class="space-y-2" style="color:rgba(255,255,255,.6)">
+<p>Montag – Freitag<br><span class="text-white font-medium">7:00 – 17:00 Uhr</span></p>
+<p>Samstag<br><span class="text-white font-medium">8:00 – 12:00 Uhr</span></p>
+<p>Sonntag<br><span class="text-white font-medium">Geschlossen</span></p>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4" style="font-family:'Playfair Display',serif">Rechtliches</h4>
+<div class="space-y-3">
+<a href="#" class="block transition" style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#e07b39'" onmouseout="this.style.color='rgba(255,255,255,.6)'">Impressum</a>
+<a href="#" class="block transition" style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#e07b39'" onmouseout="this.style.color='rgba(255,255,255,.6)'">Datenschutz</a>
+<a href="#" class="block transition" style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#e07b39'" onmouseout="this.style.color='rgba(255,255,255,.6)'">AGB</a>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t" style="border-color:rgba(255,255,255,.1)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+<p class="text-center text-sm" style="color:rgba(255,255,255,.4)">© 2025 Maurer Genze – Maurermeisterbetrieb Dessau. Alle Rechte vorbehalten.</p>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<a href="https://wa.me/493401234567" target="_blank" class="w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg card-hover floating-btn" style="background:#25D366" title="WhatsApp">💬</a>
+<a href="tel:+493401234567" class="w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg card-hover floating-btn" style="background:#e07b39" title="Anrufen">📞</a>
+</div>
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>{nav.classList.toggle('nav-scrolled',window.scrollY>50)});
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.fade-in-up').forEach(el=>observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth'});document.getElementById('mobileMenu').classList.remove('active')}})});
+</script>
+</body>
+</html>
+```
