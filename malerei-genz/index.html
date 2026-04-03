@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Malerei Genz – Ihr Meisterbetrieb für Malerarbeiten in Dessau. Professionelle Innen- und Außenarbeiten, Fassadengestaltung und mehr. Jetzt Angebot anfragen.">
+<meta name="keywords" content="Maler Dessau, Malerarbeiten Dessau, Malermeister Dessau, Fassadenanstrich Dessau, Innenputz Dessau, Malerei Genz">
+<meta name="author" content="Malerei Genz">
+<meta property="og:title" content="Malerei Genz – Meisterbetrieb in Dessau">
+<meta property="og:description" content="Professionelle Malerarbeiten in Dessau. Qualität die überzeugt – seit über 20 Jahren.">
+<meta property="og:type" content="website">
+<title>Malerei Genz – Meisterbetrieb für Malerarbeiten in Dessau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#faf8f5',
+        earth: '#8b5e3c',
+        'earth-dark': '#6b4828',
+        'earth-light': '#c4956a',
+        'warm-dark': '#2c1f14',
+        'warm-mid': '#4a3728',
+      },
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        inter: ['Inter', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #faf8f5; color: #2c1f14; }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @keyframes countUp {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes pulse-badge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(139, 94, 60, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(139, 94, 60, 0); }
+  }
+
+  .animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+  .animate-fadeIn { animation: fadeIn 1.2s ease forwards; }
+  .animate-slideDown { animation: slideDown 0.6s ease forwards; }
+  .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
+  .animate-countUp { animation: countUp 0.6s ease forwards; }
+  .animate-pulse-badge { animation: pulse-badge 2.5s infinite; }
+
+  .delay-100 { animation-delay: 0.1s; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-300 { animation-delay: 0.3s; }
+  .delay-400 { animation-delay: 0.4s; }
+  .delay-500 { animation-delay: 0.5s; }
+  .delay-600 { animation-delay: 0.6s; }
+
+  .opacity-0-start { opacity: 0; }
+
+  .nav-scrolled {
+    background-color: rgba(250, 248, 245, 0.97) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 30px rgba(44, 31, 20, 0.08);
+  }
+
+  .hero-bg {
+    background: linear-gradient(
+      135deg,
+      #2c1f14 0%,
+      #4a3728 25%,
+      #3d2b1f 50%,
+      #1a0f08 75%,
+      #0d0805 100%
+    );
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(139, 94, 60, 0.25) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(196, 149, 106, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 60% 80%, rgba(44, 31, 20, 0.8) 0%, transparent 70%);
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.015) 2px,
+        rgba(255,255,255,0.015) 4px
+      );
+    pointer-events: none;
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(circle, #c4956a22 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(139, 94, 60, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 94, 60, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .diagonal-section {
+    clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0 100%);
+    margin: -2rem 0;
+    padding: 8rem 0 8rem;
+  }
+  .diagonal-top {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  }
+  .diagonal-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+  }
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(44, 31, 20, 0.12);
+  }
+
+  .testimonial-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(44, 31, 20, 0.1);
+  }
+
+  .btn-primary {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+  .btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(139, 94, 60, 0.4);
+  }
+  .btn-secondary {
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  }
+  .btn-secondary:hover {
+    transform: scale(1.03);
+    background-color: rgba(255,255,255,0.15);
+  }
+
+  .stat-card {
+    transition: transform 0.3s ease;
+  }
+  .stat-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: calc(50% + 2.5rem);
+    width: calc(100% - 5rem);
+    height: 1px;
+    background: linear-gradient(90deg, #8b5e3c, transparent);
+  }
+
+  .quote-mark {
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0.8;
+    color: #8b5e3c;
+    opacity: 0.15;
+    position: absolute;
+    top: -1rem;
+    left: 1rem;
+  }
+
+  .floating-badge {
+    animation: pulse-badge 2.5s infinite;
+  }
+
+  .section-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5e3c, #c4956a);
+    border-radius: 2px;
+  }
+
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #8b5e3c;
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after { width: 100%; }
+  .nav-link:hover { color: #8b5e3c; }
+
+  .icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #faf8f5, #f0ebe3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(139, 94, 60, 0.15);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  .service-card:hover .icon-circle {
+    background: linear-gradient(135deg, #8b5e3c, #c4956a);
+    border-color: transparent;
+  }
+  .service-card:hover .icon-circle svg {
+    stroke: white;
+  }
+
+  input, textarea, select {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: #8b5e3c;
+    box-shadow: 0 0 0 3px rgba(139, 94, 60, 0.1);
+  }
+
+  .scroll-indicator {
+    width: 28px;
+    height: 44px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .scroll-indicator::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: white;
+    border-radius: 2px;
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
+  @media (max-width: 768px) {
+    .diagonal-section {
+      clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0 100%);
+      padding: 6rem 0;
+    }
+    .process-step::before { display: none; }
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-4 px-6 md:px-12">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded-lg flex items-center justify-center" style="background: linear-gradient(135deg, #8b5e3c, #c4956a);">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 20h20M4 20V8l8-6 8 6v12"/>
+          <rect x="9" y="14" width="6" height="6"/>
+        </svg>
+      </div>
+      <div>
+        <div class="font-playfair font-700 text-lg leading-none text-white nav-logo-text transition-colors duration-300">Malerei Genz</div>
+        <div class="text-xs text-white/60 nav-sub-text transition-colors duration-300 font-inter">Meisterbetrieb · Dessau</div>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#leistungen" class="nav-link font-inter text-sm font-medium text-white/80 nav-link-item">Leistungen</a>
+      <a href="#ueber-uns" class="nav-link font-inter text-sm font-medium text-white/80 nav-link-item">Über uns</a>
+      <a href="#referenzen" class="nav-link font-inter text-sm font-medium text-white/80 nav-link-item">Referenzen</a>
+      <a href="#prozess" class="nav-link font-inter text-sm font-medium text-white/80 nav-link-item">Ablauf</a>
+    </div>
+
+    <a href="#kontakt" class="btn-primary hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium font-inter text-white" style="background: linear-gradient(135deg, #8b5e3c, #c4956a);">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0
