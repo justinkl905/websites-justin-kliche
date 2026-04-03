@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dachdecker Genz – Ihr Meisterbetrieb für Dachdeckerarbeiten in Dessau. Über 20 Jahre Erfahrung, 500+ abgeschlossene Projekte. Jetzt kostenlos anfragen.">
+<meta name="keywords" content="Dachdecker Dessau, Dachdeckerarbeiten Dessau, Dachsanierung Dessau, Meisterbetrieb Dachdecker, Dachreparatur Dessau">
+<meta name="author" content="Dachdecker Genz">
+<meta property="og:title" content="Dachdecker Genz – Meisterbetrieb in Dessau">
+<meta property="og:description" content="Professionelle Dachdeckerarbeiten in Dessau und Umgebung. Qualität die überzeugt – seit über 20 Jahren.">
+<meta property="og:type" content="website">
+<title>Dachdecker Genz | Meisterbetrieb Dessau</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scrollBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(184,115,51,0.3); }
+    50% { box-shadow: 0 0 0 10px rgba(184,115,51,0); }
+  }
+
+  .hero-headline {
+    animation: fadeInUp 1s ease forwards;
+  }
+  .hero-sub {
+    animation: fadeInUp 1s ease 0.2s both;
+  }
+  .hero-buttons {
+    animation: fadeInUp 1s ease 0.4s both;
+  }
+  .hero-badge {
+    animation: fadeInUp 1s ease 0.6s both;
+  }
+  .scroll-indicator {
+    animation: scrollBounce 2s ease-in-out infinite;
+  }
+  .floating-badge {
+    animation: badgePulse 2.5s ease-in-out infinite;
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(44,62,80,0.15);
+  }
+
+  .btn-primary {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(184,115,51,0.4);
+  }
+  .btn-secondary {
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-secondary:hover {
+    transform: scale(1.03);
+    background-color: rgba(255,255,255,0.15);
+  }
+
+  .stat-card {
+    animation: fadeInUp 0.8s ease both;
+  }
+  .stat-card:nth-child(1) { animation-delay: 0.1s; }
+  .stat-card:nth-child(2) { animation-delay: 0.2s; }
+  .stat-card:nth-child(3) { animation-delay: 0.3s; }
+  .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+  .service-card:nth-child(1) { animation-delay: 0.05s; }
+  .service-card:nth-child(2) { animation-delay: 0.1s; }
+  .service-card:nth-child(3) { animation-delay: 0.15s; }
+  .service-card:nth-child(4) { animation-delay: 0.2s; }
+  .service-card:nth-child(5) { animation-delay: 0.25s; }
+  .service-card:nth-child(6) { animation-delay: 0.3s; }
+
+  .diagonal-top {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  .diagonal-bottom {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-scrolled {
+    background-color: rgba(255,255,255,0.97) !important;
+    box-shadow: 0 2px 30px rgba(44,62,80,0.08);
+  }
+
+  .testimonial-quote::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem;
+    line-height: 0;
+    position: absolute;
+    top: 3rem;
+    left: 1.5rem;
+    color: rgba(184,115,51,0.15);
+    font-weight: 700;
+  }
+
+  .process-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #b87333, transparent);
+  }
+
+  input, textarea, select {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .section-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .section-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    .hero-headline-text { font-size: 2.8rem !important; }
+    .hero-power { font-size: 1rem !important; }
+  }
+</style>
+</head>
+<body style="color: #2c3e50; background-color: #ffffff;">
+
+<!-- NAVIGATION -->
+<nav id="navbar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background-color: transparent; transition: background-color 0.4s ease, box-shadow 0.4s ease;">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #b87333, #d4956a); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+        <span style="color: white; font-size: 1.2rem;">🏠</span>
+      </div>
+      <div>
+        <div style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.1rem; color: #ffffff; line-height: 1.1;" class="nav-logo-primary">Dachdecker Genz</div>
+        <div style="font-size: 0.65rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.7); text-transform: uppercase;" class="nav-logo-sub">Meisterbetrieb · Dessau</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#leistungen" style="color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500; text-decoration: none; transition: color 0.2s;" class="nav-link" onmouseover="this.style.color='#b87333'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Leistungen</a>
+      <a href="#ueber-uns" style="color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500; text-decoration: none;" class="nav-link" onmouseover="this.style.color='#b87333'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Über uns</a>
+      <a href="#referenzen" style="color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500; text-decoration: none;" class="nav-link" onmouseover="this.style.color='#b87333'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Referenzen</a>
+      <a href="#kontakt" style="background: linear-gradient(135deg, #b87333, #d4956a); color: white; padding: 10px 24px; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" class="btn-primary">Jetzt anfragen</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden" style="color: white; background: none; border: none; cursor: pointer; font-size: 1.5rem;">☰</button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden" style="background-color: #2c3e50; padding: 1rem 1.5rem 1.5rem;">
+    <a href="#leistungen" style="display: block; color: rgba(255,255,255,0.85); padding: 0.75rem 0; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);">Leistungen</a>
+    <a href="#ueber-uns" style="display: block; color: rgba(255,255,255,0.85); padding: 0.75rem 0; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);">Über uns</a>
+    <a href="#referenzen" style="display: block; color: rgba(255,255,255,0.85); padding: 0.75rem 0; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.1);">Referenzen</a>
+    <a href="#kontakt" style="display: block; margin-top: 1rem; background: linear-gradient(135deg, #b87333, #d4956a); color: white; padding: 12px 24px; border-radius: 6px; font-size: 0.9rem; font-weight: 600; text-decoration: none; text-align: center;">Jetzt anfragen</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="min-height: 100vh; background: linear-gradient(135deg, #1a2634 0%, #2c3e50 40%, #3d5268 70%, #2c3e50 100%); position: relative; display: flex; align-items: center; overflow: hidden;">
+  <!-- Background texture elements -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 70% 30%, rgba(184,115,51,0.12) 0%, transparent 60%); pointer-events: none;"></div>
+  <div style="position: absolute; bottom: 0; right: 0; width: 50%; height: 70%; background: radial-gradient(ellipse at 100% 100%, rgba(184,115,51,0.07) 0%, transparent 60%); pointer-events: none;"></div>
+  
+  <!-- Decorative roof shapes -->
+  <div style="position: absolute; top: 15%; right: 8%; opacity: 0.06; pointer-events: none;">
+    <div style="width: 0; height: 0; border-left: 120px solid transparent; border-right: 120px solid transparent; border-bottom: 100px solid #b87333;"></div>
+    <div style="width: 240px; height: 60px; background: #b87333; margin-top: 0;"></div>
+  </div>
+  <div style="position: absolute; bottom: 20%; left: 5%; opacity: 0.04; pointer-events: none;">
+    <div style="width: 0; height: 0; border-left: 60px solid transparent; border-right: 60px solid transparent; border-bottom: 50px solid #b87333;"></div>
+    <div style="width: 120px; height: 30px; background: #b87333;"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-32 w-full">
+    <div class="max-w-4xl">
+      <!-- Floating Badge -->
+      <div class="hero-badge" style="display: inline-flex; align-items: center; gap: 8px; background: rgba(184,115,51,0.15); border: 1px solid rgba(184,115,51,0.4); border-radius: 100px; padding: 8px 20px; margin-bottom: 2rem;">
+        <div class="floating-badge" style="width: 8px; height: 8px; background: #b87333; border-radius: 50%;"></div>
+        <span style="color: #d4a87a; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">Meisterbetrieb · Seit 2003 in Dessau</span>
+      </div>
+
+      <!-- Power Statement -->
+      <div class="hero-headline">
+        <p class="hero-power" style="color: #b87333; font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem;">Ihr Dach. Unser Versprechen.</p>
+        <h1 class="hero-headline-text" style="font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 800; color: #ffffff; line-height: 1.05; margin-bottom: 1.5rem;">
+          Handwerk das<br>
+          <span style="color: #b87333;">schützt.</span>
