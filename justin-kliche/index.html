@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Kliche – Professionelle Websites für Handwerksbetriebe</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes countUp{from{opacity:0;transform:scale(0.5)}to{opacity:1;transform:scale(1)}}
+.fade-in-up{animation:fadeInUp 0.8s ease-out both}
+.fade-in-left{animation:fadeInLeft 0.8s ease-out both}
+.fade-in-right{animation:fadeInRight 0.8s ease-out both}
+.delay-1{animation-delay:0.1s}
+.delay-2{animation-delay:0.2s}
+.delay-3{animation-delay:0.3s}
+.delay-4{animation-delay:0.4s}
+.delay-5{animation-delay:0.5s}
+.delay-6{animation-delay:0.6s}
+.hidden-anim{opacity:0;transform:translateY(40px);transition:all 0.7s ease-out}
+.hidden-anim.visible{opacity:1;transform:translateY(0)}
+.card-hover{transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275)}
+.card-hover:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(30,58,95,0.2)}
+.btn-hover{transition:all 0.3s ease;position:relative;overflow:hidden}
+.btn-hover:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(224,123,57,0.4)}
+.btn-hover::after{content:'';position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:rgba(255,255,255,0.2);transition:all 0.5s ease;transform:translate(-50%,-50%)}
+.btn-hover:hover::after{width:300px;height:300px}
+.nav-scrolled{backdrop-filter:blur(20px);box-shadow:0 4px 30px rgba(0,0,0,0.15)}
+.float-btn{animation:float 3s ease-in-out infinite}
+.float-btn:nth-child(2){animation-delay:0.5s}
+html{scroll-behavior:smooth}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:#f1f1f1}
+::-webkit-scrollbar-thumb{background:#1e3a5f;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:#e07b39}
+.gradient-text{background:linear-gradient(135deg,#e07b39,#f4a261);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-pattern{background-image:radial-gradient(circle at 20% 50%,rgba(224,123,57,0.1) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(30,58,95,0.1) 0%,transparent 50%)}
+.process-line{position:relative}
+.process-line::before{content:'';position:absolute;top:50%;left:0;right:0;height:3px;background:linear-gradient(90deg,#1e3a5f,#e07b39);z-index:0}
+@media(max-width:768px){.process-line::before{display:none}}
+.star{color:#e07b39}
+</style>
+</head>
+<body>
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background:rgba(30,58,95,0.95)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16 lg:h-20">
+<a href="#home" class="flex items-center gap-2">
+<span class="text-2xl lg:text-3xl font-bold" style="font-family:'Playfair Display',serif;color:#e07b39">Justin Kliche</span>
+</a>
+<div class="hidden lg:flex items-center gap-8">
+<a href="#home" class="text-white hover:text-orange-300 transition-colors font-medium">Home</a>
+<a href="#leistungen" class="text-white hover:text-orange-300 transition-colors font-medium">Leistungen</a>
+<a href="#ueber-uns" class="text-white hover:text-orange-300 transition-colors font-medium">Über uns</a>
+<a href="#referenzen" class="text-white hover:text-orange-300 transition-colors font-medium">Referenzen</a>
+<a href="#kontakt" class="text-white hover:text-orange-300 transition-colors font-medium">Kontakt</a>
+</div>
+<a href="#kontakt" class="hidden sm:inline-block btn-hover px-6 py-2.5 rounded-full text-white font-semibold text-sm" style="background:linear-gradient(135deg,#e07b39,#c9692e)">Jetzt anfragen</a>
+<button id="mobileToggle" class="lg:hidden text-white text-2xl">☰</button>
+</div>
+</div>
+<div id="mobileMenu" class="hidden lg:hidden pb-4 px-4">
+<a href="#home" class="block py-2 text-white hover:text-orange-300 transition-colors">Home</a>
+<a href="#leistungen" class="block py-2 text-white hover:text-orange-300 transition-colors">Leistungen</a>
+<a href="#ueber-uns" class="block py-2 text-white hover:text-orange-300 transition-colors">Über uns</a>
+<a href="#referenzen" class="block py-2 text-white hover:text-orange-300 transition-colors">Referenzen</a>
+<a href="#kontakt" class="block py-2 text-white hover:text-orange-300 transition-colors">Kontakt</a>
+<a href="#kontakt" class="inline-block mt-3 btn-hover px-6 py-2.5 rounded-full text-white font-semibold text-sm" style="background:linear-gradient(135deg,#e07b39,#c9692e)">Jetzt anfragen</a>
+</div>
+</nav>
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://i.ibb.co/p6DcK0PN/Werkbank-in-gem-tlicher-Werkstattbeleuchtung.png" alt="Werkstatt" class="w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(30,58,95,0.92) 0%,rgba(30,58,95,0.75) 50%,rgba(30,58,95,0.88) 100%)"></div>
+<div class="absolute inset-0 hero-pattern"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0">
+<div class="max-w-3xl">
+<div class="fade-in-up delay-1 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8" style="background:rgba(224,123,57,0.15);border:1px solid rgba(224,123,57,0.3)">
+<span style="color:#e07b39">⭐</span>
+<span class="text-sm font-semibold" style="color:#e07b39">Meisterbetrieb aus Sachsen-Anhalt</span>
+</div>
+<p class="fade-in-up delay-2 text-lg sm:text-xl font-semibold mb-4 tracking-wide uppercase" style="color:#e07b39;letter-spacing:3px">Digitale Handwerkskunst</p>
+<h1 class="fade-in-up delay-3 text-4xl sm:text-5xl lg:text-7xl font-black text-white leading-tight mb-6" style="font-family:'Playfair Display',serif">
+Websites, die Ihr <span class="gradient-text">Handwerk</span> zum Strahlen bringen
+</h1>
+<p class="fade-in-up delay-4 text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+Wir gestalten professionelle Websites für Handwerksbetriebe in Sachsen-Anhalt und ganz Deutschland. Mehr Sichtbarkeit, mehr Kundenanfragen, mehr Wachstum – genau auf Ihr Gewerk zugeschnitten.
+</p>
+<div class="fade-in-up delay-5 flex flex-col sm:flex-row gap-4">
+<a href="#kontakt" class="btn-hover inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg" style="background:linear-gradient(135deg,#e07b39,#c9692e)">
+Kostenlos beraten lassen
+<span>→</span>
+</a>
+<a href="#leistungen" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg border-2 border-white/30 hover:border-white/60 transition-all hover:bg-white/10">
+Leistungen entdecken
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+<a href="#stats" class="text-white/50 hover:text-white transition-colors">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+</a>
+</div>
+</section>
+<section id="stats" class="relative py-16 lg:py-20" style="background:linear-gradient(135deg,#1e3a5f,#15304f)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+<div class="hidden-anim text-center">
+<div class="text-4xl lg:text-5xl font-black mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">500+</div>
+<div class="text-gray-300 font-medium">Abgeschlossene Projekte</div>
+</div>
+<div class="hidden-anim text-center" style="transition-delay:0.1s">
+<div class="text-4xl lg:text-5xl font-black mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">15</div>
+<div class="text-gray-300 font-medium">Jahre Erfahrung</div>
+</div>
+<div class="hidden-anim text-center" style="transition-delay:0.2s">
+<div class="text-4xl lg:text-5xl font-black mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">98%</div>
+<div class="text-gray-300 font-medium">Zufriedene Kunden</div>
+</div>
+<div class="hidden-anim text-center" style="transition-delay:0.3s">
+<div class="text-4xl lg:text-5xl font-black mb-2" style="font-family:'Playfair Display',serif;color:#e07b39">24h</div>
+<div class="text-gray-300 font-medium">Erreichbarkeit & Service</div>
+</div>
+</div>
+</div>
+</section>
+<section id="leistungen" class="py-20 lg:py-28" style="background:#f8f9fc">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">Was wir bieten</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Unsere Leistungen</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Maßgeschneiderte digitale Lösungen, die speziell für Handwerksbetriebe entwickelt werden – von der ersten Idee bis zum fertigen Webauftritt.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100">
+<div class="text-5xl mb-5">🌐</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Website-Erstellung</h3>
+<p class="text-gray-600 leading-relaxed">Wir erstellen moderne, mobiloptimierte Websites, die Ihr Handwerk professionell präsentieren. Jede Seite wird individuell auf Ihr Gewerk und Ihre Zielgruppe zugeschnitten, damit Sie sich von der Konkurrenz abheben.</p>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100" style="transition-delay:0.1s">
+<div class="text-5xl mb-5">🔍</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Suchmaschinenoptimierung</h3>
+<p class="text-gray-600 leading-relaxed">Durch gezielte SEO-Maßnahmen sorgen wir dafür, dass Ihr Betrieb bei Google gefunden wird. Lokale Suchbegriffe und regionale Optimierung bringen Ihnen genau die Kunden, die Ihre Dienstleistungen vor Ort suchen.</p>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100" style="transition-delay:0.2s">
+<div class="text-5xl mb-5">📱</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Responsive Design</h3>
+<p class="text-gray-600 leading-relaxed">Über 70 % aller Websitebesuche erfolgen heute über Smartphones. Wir garantieren, dass Ihre Website auf jedem Gerät perfekt aussieht und blitzschnell lädt – für ein optimales Nutzererlebnis.</p>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100" style="transition-delay:0.3s">
+<div class="text-5xl mb-5">✏️</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Content & Texterstellung</h3>
+<p class="text-gray-600 leading-relaxed">Professionelle Texte, die Ihre Expertise und Leidenschaft für Ihr Handwerk vermitteln. Wir schreiben überzeugende Inhalte, die Vertrauen aufbauen und Besucher in Kunden verwandeln.</p>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100" style="transition-delay:0.4s">
+<div class="text-5xl mb-5">📸</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Fotografie & Bildbearbeitung</h3>
+<p class="text-gray-600 leading-relaxed">Hochwertige Bilder sind das Aushängeschild jeder Website. Wir setzen Ihre Projekte, Ihr Team und Ihre Werkstatt professionell in Szene und sorgen für einen visuell beeindruckenden Auftritt.</p>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100" style="transition-delay:0.5s">
+<div class="text-5xl mb-5">🛠️</div>
+<h3 class="text-xl font-bold mb-3" style="font-family:'Playfair Display',serif;color:#1e3a5f">Wartung & Support</h3>
+<p class="text-gray-600 leading-relaxed">Nach dem Launch lassen wir Sie nicht allein. Regelmäßige Updates, Sicherheitschecks und technischer Support sorgen dafür, dass Ihre Website stets aktuell, sicher und leistungsfähig bleibt.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 lg:py-28" style="background:white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">Ihre Vorteile</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Warum Justin Kliche?</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Drei starke Gründe, warum Handwerksbetriebe in ganz Sachsen-Anhalt und darüber hinaus auf unsere Expertise vertrauen.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-10">
+<div class="hidden-anim text-center lg:text-left">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto lg:mx-0" style="background:rgba(224,123,57,0.1)">🤝</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Absolute Zuverlässigkeit</h3>
+<p class="text-gray-600 leading-relaxed mb-3">Wir halten, was wir versprechen – bei jedem einzelnen Projekt. Termine werden eingehalten, Absprachen sind verbindlich und Sie können sich jederzeit auf uns verlassen.</p>
+<p class="text-gray-600 leading-relaxed mb-3">Transparente Kommunikation ist für uns selbstverständlich. Sie wissen immer genau, wo Ihr Projekt steht und welche Schritte als Nächstes anstehen.</p>
+<p class="text-gray-600 leading-relaxed">Auch nach der Fertigstellung sind wir für Sie da. Schnelle Reaktionszeiten und persönlicher Ansprechpartner – das ist unser Standard.</p>
+</div>
+<div class="hidden-anim text-center lg:text-left" style="transition-delay:0.15s">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto lg:mx-0" style="background:rgba(224,123,57,0.1)">🏆</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Kompromisslose Qualität</h3>
+<p class="text-gray-600 leading-relaxed mb-3">Jede Website verlässt unser Büro erst, wenn sie unseren hohen Qualitätsansprüchen genügt. Pixelgenaues Design, sauberer Code und perfekte Performance sind unser Markenzeichen.</p>
+<p class="text-gray-600 leading-relaxed mb-3">Wir arbeiten ausschließlich mit modernsten Technologien und bewährten Methoden, damit Ihre Website zukunftssicher und wettbewerbsfähig bleibt.</p>
+<p class="text-gray-600 leading-relaxed">Unsere Ergebnisse sprechen für sich: Über 500 zufriedene Kunden und eine Weiterempfehlungsrate von nahezu 100 Prozent belegen unseren Qualitätsanspruch.</p>
+</div>
+<div class="hidden-anim text-center lg:text-left" style="transition-delay:0.3s">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto lg:mx-0" style="background:rgba(224,123,57,0.1)">📍</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Regionale Verbundenheit</h3>
+<p class="text-gray-600 leading-relaxed mb-3">Als Unternehmen aus Sachsen-Anhalt kennen wir den regionalen Markt wie unsere Westentasche. Wir verstehen die Bedürfnisse der Handwerksbetriebe vor Ort und wissen, was deren Kunden erwarten.</p>
+<p class="text-gray-600 leading-relaxed mb-3">Persönliche Treffen, kurze Wege und ein echtes Verständnis für die regionale Wirtschaft zeichnen unsere Zusammenarbeit aus.</p>
+<p class="text-gray-600 leading-relaxed">Wir stärken das Handwerk in unserer Region und tragen dazu bei, dass lokale Betriebe auch digital sichtbar werden und gegen überregionale Konkurrenz bestehen können.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 lg:py-28" style="background:#f8f9fc">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">So arbeiten wir</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">In 3 Schritten zum Erfolg</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Unser bewährter Prozess macht es Ihnen leicht – vom ersten Kontakt bis zur fertigen Website.</p>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 -translate-y-1/2" style="background:linear-gradient(90deg,#1e3a5f,#e07b39)"></div>
+<div class="grid lg:grid-cols-3 gap-12">
+<div class="hidden-anim relative text-center">
+<div class="relative z-10 w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black text-white mx-auto mb-6 shadow-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a);font-family:'Playfair Display',serif">1</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Kontaktaufnahme</h3>
+<p class="text-gray-600 leading-relaxed">Sie rufen uns an oder schreiben uns eine Nachricht – ganz unkompliziert. In einem kostenlosen Erstgespräch lernen wir Ihren Betrieb kennen und verstehen Ihre Wünsche und Ziele. Gemeinsam legen wir den Grundstein für Ihren neuen Webauftritt.</p>
+</div>
+<div class="hidden-anim relative text-center" style="transition-delay:0.15s">
+<div class="relative z-10 w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black text-white mx-auto mb-6 shadow-lg" style="background:linear-gradient(135deg,#e07b39,#c9692e);font-family:'Playfair Display',serif">2</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Beratung & Konzept</h3>
+<p class="text-gray-600 leading-relaxed">Wir analysieren Ihre Branche, Ihre Mitbewerber und Ihre Zielgruppe. Daraus entwickeln wir ein maßgeschneidertes Konzept mit Designentwürfen, Seitenstruktur und Inhaltsstrategie. Sie geben Feedback – wir setzen es um.</p>
+</div>
+<div class="hidden-anim relative text-center" style="transition-delay:0.3s">
+<div class="relative z-10 w-20 h-20 rounded-full flex items-center justify-center text-3xl font-black text-white mx-auto mb-6 shadow-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a);font-family:'Playfair Display',serif">3</div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#1e3a5f">Umsetzung & Launch</h3>
+<p class="text-gray-600 leading-relaxed">Unser Team setzt Ihre Website pixelgenau um – responsive, schnell und suchmaschinenoptimiert. Nach Ihrer finalen Freigabe geht die Seite live. Inklusive Einweisung, damit Sie Änderungen selbst vornehmen können.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ueber-uns" class="py-20 lg:py-28 relative overflow-hidden" style="background:#1e3a5f">
+<div class="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style="background:radial-gradient(circle,#e07b39,transparent);transform:translate(30%,-30%)"></div>
+<div class="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10" style="background:radial-gradient(circle,#e07b39,transparent);transform:translate(-30%,30%)"></div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">Über uns</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6" style="font-family:'Playfair Display',serif">Die Geschichte hinter Justin Kliche</h2>
+</div>
+<div class="hidden-anim space-y-6 text-lg text-gray-300 leading-relaxed">
+<p>Was als Leidenschaft für gutes Webdesign begann, ist heute ein etabliertes Unternehmen, das sich voll und ganz der digitalen Sichtbarkeit von Handwerksbetrieben verschrieben hat. Justin Kliche gründete sein Unternehmen in Sachsen-Anhalt mit einer klaren Vision: Handwerkern dabei zu helfen, im digitalen Zeitalter nicht nur mitzuhalten, sondern zu glänzen. Die Kombination aus technischem Know-how, kreativem Gespür und einem tiefen Verständnis für die Handwerksbranche macht unsere Arbeit einzigartig.</p>
+<p>Über die Jahre durften wir mehr als 500 Handwerksbetriebe auf ihrem Weg ins Internet begleiten – vom kleinen Tischlereibetrieb über Dachdeckermeister bis hin zu wachsenden SHK-Unternehmen. Jedes Projekt hat uns gelehrt, dass keine zwei Betriebe gleich sind. Deshalb gibt es bei uns keine Lösungen von der Stange. Wir hören zu, verstehen Ihre individuellen Anforderungen und liefern Ergebnisse, die messbar sind: mehr Anrufe, mehr Anfragen und mehr Aufträge für Ihr Handwerk.</p>
+<p>Heute arbeiten wir mit einem Netzwerk erfahrener Spezialisten für Design, Texterstellung, Fotografie und Suchmaschinenoptimierung zusammen. Unser Anspruch ist es, für jeden Kunden das Maximum herauszuholen – und das mit einer persönlichen Betreuung, die in der Branche ihresgleichen sucht. Denn am Ende des Tages geht es nicht nur um eine schöne Website. Es geht darum, Ihr Lebenswerk ins beste Licht zu rücken und die Zukunft Ihres Betriebs nachhaltig zu stärken.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="referenzen" class="py-20 lg:py-28" style="background:white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">Kundenstimmen</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Das sagen unsere Kunden</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Echte Erfahrungen von Handwerksbetrieben, die mit uns zusammenarbeiten.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+<div class="flex gap-1 mb-4">
+<span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Justin Kliche hat unsere Erwartungen bei Weitem übertroffen. Die neue Website hat unsere Anfragen innerhalb von drei Monaten verdoppelt – wir können das Team nur wärmstens empfehlen. Professioneller und zuverlässiger geht es nicht."</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">MK</div>
+<div>
+<div class="font-bold" style="color:#1e3a5f">Markus Kessler</div>
+<div class="text-sm text-gray-500">Kessler Elektrotechnik GmbH</div>
+</div>
+</div>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm" style="transition-delay:0.15s">
+<div class="flex gap-1 mb-4">
+<span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Endlich eine Agentur, die versteht, was Handwerker brauchen! Die Kommunikation war hervorragend, der Zeitplan wurde eingehalten und das Ergebnis sieht fantastisch aus. Unsere Kunden loben die neue Seite regelmäßig."</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:linear-gradient(135deg,#e07b39,#c9692e)">SB</div>
+<div>
+<div class="font-bold" style="color:#1e3a5f">Sandra Bergmann</div>
+<div class="text-sm text-gray-500">Bergmann Maler & Lackierung</div>
+</div>
+</div>
+</div>
+<div class="hidden-anim card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm" style="transition-delay:0.3s">
+<div class="flex gap-1 mb-4">
+<span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span><span class="star text-xl">★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6 italic">"Von der ersten Beratung bis zum Go-Live hat alles reibungslos funktioniert. Besonders beeindruckt hat mich, wie gut Justin unser Handwerk verstanden und in das Design übersetzt hat. Top Preis-Leistung und absolut empfehlenswert!"</p>
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">TW</div>
+<div>
+<div class="font-bold" style="color:#1e3a5f">Thomas Weber</div>
+<div class="text-sm text-gray-500">Weber Sanitär & Heizung</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="kontakt" class="py-20 lg:py-28" style="background:#f8f9fc">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 hidden-anim">
+<p class="text-sm font-bold tracking-widest uppercase mb-4" style="color:#e07b39;letter-spacing:4px">Kontakt</p>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6" style="font-family:'Playfair Display',serif;color:#1e3a5f">Lassen Sie uns sprechen</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Bereit für Ihren neuen Webauftritt? Kontaktieren Sie uns jetzt – unverbindlich und kostenlos.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<div class="hidden-anim">
+<div class="space-y-6 mb-10">
+<a href="tel:+4915251978483" class="btn-hover flex items-center gap-4 p-5 rounded-2xl text-white font-semibold text-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)">
+<span class="text-3xl">📞</span>
+<div>
+<div class="text-sm opacity-75">Jetzt anrufen</div>
+<div>+49 152 5197 8483</div>
+</div>
+</a>
+<a href="mailto:info@justinkliche.de" class="btn-hover flex items-center gap-4 p-5 rounded-2xl text-white font-semibold text-lg" style="background:linear-gradient(135deg,#e07b39,#c9692e)">
+<span class="text-3xl">✉️</span>
+<div>
+<div class="text-sm opacity-75">E-Mail schreiben</div>
+<div>info@justinkliche.de</div>
+</div>
+</a>
+</div>
+<div class="p-8 rounded-2xl" style="background:#1e3a5f">
+<h3 class="text-xl font-bold text-white mb-4" style="font-family:'Playfair Display',serif">Schnelle Antwortzeiten</h3>
+<p class="text-gray-300 leading-relaxed">Wir melden uns in der Regel innerhalb von 24 Stunden bei Ihnen zurück. In dringenden Fällen erreichen Sie uns jederzeit telefonisch. Ihr Projekt hat bei uns oberste Priorität.</p>
+</div>
+</div>
+<div class="hidden-anim" style="transition-delay:0.15s">
+<form class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100" onsubmit="event.preventDefault();alert('Vielen Dank für Ihre Nachricht! Wir melden uns schnellstmöglich bei Ihnen.');">
+<div class="space-y-5">
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Ihr Name *</label>
+<input type="text" required placeholder="Max Mustermann" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 transition-all" style="focus:ring-color:#e07b39" onfocus="this.style.borderColor='#e07b39';this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.1)'" onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Telefonnummer *</label>
+<input type="tel" required placeholder="+49 123 456 789" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none transition-all" onfocus="this.style.borderColor='#e07b39';this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.1)'" onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">E-Mail-Adresse *</label>
+<input type="email" required placeholder="info@ihrefirma.de" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none transition-all" onfocus="this.style.borderColor='#e07b39';this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.1)'" onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Ihre Nachricht *</label>
+<textarea required rows="4" placeholder="Erzählen Sie uns von Ihrem Projekt..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none transition-all resize-none" onfocus="this.style.borderColor='#e07b39';this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.1)'" onblur="this.style.borderColor='#e5e7eb';this.style.boxShadow='none'"></textarea>
+</div>
+<button type="submit" class="btn-hover w-full py-4 rounded-xl text-white font-bold text-lg" style="background:linear-gradient(135deg,#e07b39,#c9692e)">
+Nachricht senden →
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="py-16" style="background:#0f2237">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+<div>
+<h3 class="text-2xl font-bold mb-4" style="font-family:'Playfair Display',serif;color:#e07b39">Justin Kliche</h3>
+<p class="text-gray-400 leading-relaxed">Professionelle Website-Erstellung für Handwerksbetriebe in Sachsen-Anhalt und deutschlandweit.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Adresse</h4>
+<p class="text-gray-400 leading-relaxed">
+Justin Kliche<br>
+Sachsen-Anhalt, Deutschland<br>
+Tel: <a href="tel:+4915251978483" class="hover:text-orange-300 transition-colors">+49 152 5197 8483</a><br>
+E-Mail: <a href="mailto:info@justinkliche.de" class="hover:text-orange-300 transition-colors">info@justinkliche.de</a>
+</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Öffnungszeiten</h4>
+<p class="text-gray-400 leading-relaxed">
+Mo – Fr: 08:00 – 18:00 Uhr<br>
+Sa: 09:00 – 14:00 Uhr<br>
+So: Geschlossen<br>
+<span style="color:#e07b39" class="text-sm font-semibold">Telefonisch 24h erreichbar</span>
+</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Rechtliches</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Impressum</a></li>
+<li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">Datenschutzerklärung</a></li>
+<li><a href="#" class="text-gray-400 hover:text-orange-300 transition-colors">AGB</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8 text-center">
+<p class="text-gray-500 text-sm">© 2025 Justin Kliche – Website-Erstellung für Handwerksbetriebe. Alle Rechte vorbehalten.</p>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<a href="tel:+4915251978483" class="float-btn w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:scale-110 transition-transform" style="background:linear-gradient(135deg,#1e3a5f,#2a4f7a)" title="Jetzt anrufen">📞</a>
+<a href="https://wa.me/4915251978483" target="_blank" class="float-btn w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg hover:scale-110 transition-transform" style="background:linear-gradient(135deg,#25d366,#128c7e)" title="WhatsApp schreiben">💬</a>
+</div>
+<script>
+const navbar=document.getElementById('navbar');
+const mobileToggle=document.getElementById('mobileToggle');
+const mobileMenu=document.getElementById('mobileMenu');
+window.addEventListener('scroll',()=>{
+if(window.scrollY>50){navbar.classList.add('nav-scrolled');navbar.style.background='rgba(30,58,95,0.98)'}
+else{navbar.classList.remove('nav-scrolled');navbar.style.background='rgba(30,58,95,0.95)'}
+});
+mobileToggle.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden')});
+mobileMenu.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
+},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.hidden-anim').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
