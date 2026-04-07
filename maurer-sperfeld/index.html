@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maurer Sperfeld – Ihr Maurermeisterbetrieb in Stendal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Inter',sans-serif}h1,h2,h3,.font-display{font-family:'Playfair Display',serif}@keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}.fade-in-up{animation:fadeInUp .8s ease forwards;opacity:0}.fade-in-up.visible{opacity:1}.delay-1{animation-delay:.2s}.delay-2{animation-delay:.4s}.delay-3{animation-delay:.6s}.delay-4{animation-delay:.8s}.delay-5{animation-delay:1s}html{scroll-behavior:smooth}.nav-scrolled{backdrop-filter:blur(20px)!important;box-shadow:0 4px 30px rgba(0,0,0,.15)!important}.card-hover{transition:all .4s cubic-bezier(.25,.46,.45,.94)}.card-hover:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(30,58,95,.2)}.btn-hover{transition:all .3s ease}.btn-hover:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(224,123,57,.4)}.btn-outline-hover{transition:all .3s ease}.btn-outline-hover:hover{transform:translateY(-2px)}.floating-btn{transition:all .3s ease}.floating-btn:hover{transform:scale(1.1)}.stat-number{background:linear-gradient(135deg,#e07b39,#f4a261);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+</style>
+</head>
+<body>
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500" style="background:rgba(30,58,95,0.95)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<a href="#home" class="font-display text-2xl font-bold tracking-tight" style="color:#e07b39">Maurer Sperfeld</a>
+<div class="hidden lg:flex items-center space-x-8">
+<a href="#home" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Home</a>
+<a href="#leistungen" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Leistungen</a>
+<a href="#ueber-uns" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Über uns</a>
+<a href="#referenzen" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Referenzen</a>
+<a href="#kontakt" class="text-white/80 hover:text-white transition-colors text-sm font-medium tracking-wide">Kontakt</a>
+<a href="#kontakt" class="btn-hover px-6 py-3 rounded-full text-white text-sm font-semibold tracking-wide" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">Jetzt anfragen</a>
+</div>
+<button id="mobile-toggle" class="lg:hidden text-white">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden lg:hidden pb-6 px-4">
+<div class="flex flex-col space-y-4">
+<a href="#home" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Home</a>
+<a href="#leistungen" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Leistungen</a>
+<a href="#ueber-uns" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Über uns</a>
+<a href="#referenzen" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Referenzen</a>
+<a href="#kontakt" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Kontakt</a>
+<a href="#kontakt" class="btn-hover inline-block text-center px-6 py-3 rounded-full text-white text-sm font-semibold" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">Jetzt anfragen</a>
+</div>
+</div>
+</nav>
+
+<section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img src="https://i.ibb.co/p6DcK0PN/Werkbank-in-gem-tlicher-Werkstattbeleuchtung.png" alt="Werkstatt" class="w-full h-full object-cover">
+<div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(30,58,95,0.92) 0%,rgba(30,58,95,0.75) 50%,rgba(224,123,57,0.3) 100%)"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="fade-in-up inline-flex items-center px-5 py-2 rounded-full border mb-8" style="border-color:rgba(224,123,57,0.5);background:rgba(224,123,57,0.1)">
+<span class="text-sm font-semibold tracking-widest uppercase" style="color:#e07b39">⭐ Meisterbetrieb seit 2009</span>
+</div>
+<p class="fade-in-up delay-1 text-lg sm:text-xl font-medium mb-4 tracking-wider uppercase" style="color:#e07b39">Handwerk mit Herz und Verstand</p>
+<h1 class="fade-in-up delay-2 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-900 text-white leading-tight mb-6">Solides Mauerwerk<br><span style="color:#e07b39">für Generationen</span></h1>
+<p class="fade-in-up delay-3 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto mb-10 leading-relaxed">Vom Neubau bis zur Sanierung – Maurer Sperfeld ist Ihr verlässlicher Partner für alle Maurerarbeiten in Stendal und der Altmark. Qualität, die man sieht und spürt.</p>
+<div class="fade-in-up delay-4 flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#kontakt" class="btn-hover px-8 py-4 rounded-full text-white text-lg font-semibold tracking-wide" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">Kostenloses Angebot anfordern</a>
+<a href="#leistungen" class="btn-outline-hover px-8 py-4 rounded-full text-white text-lg font-semibold tracking-wide border-2" style="border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05)">Unsere Leistungen →</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+</div>
+</section>
+
+<section class="py-16 relative" style="background:linear-gradient(135deg,#1e3a5f 0%,#152d4a 100%)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center fade-in-up">
+<div class="stat-number font-display text-4xl sm:text-5xl font-800 mb-2">500+</div>
+<p class="text-white/70 text-sm font-medium tracking-wide uppercase">Projekte realisiert</p>
+</div>
+<div class="text-center fade-in-up delay-1">
+<div class="stat-number font-display text-4xl sm:text-5xl font-800 mb-2">15</div>
+<p class="text-white/70 text-sm font-medium tracking-wide uppercase">Jahre Erfahrung</p>
+</div>
+<div class="text-center fade-in-up delay-2">
+<div class="stat-number font-display text-4xl sm:text-5xl font-800 mb-2">98%</div>
+<p class="text-white/70 text-sm font-medium tracking-wide uppercase">Zufriedene Kunden</p>
+</div>
+<div class="text-center fade-in-up delay-3">
+<div class="stat-number font-display text-4xl sm:text-5xl font-800 mb-2">24h</div>
+<p class="text-white/70 text-sm font-medium tracking-wide uppercase">Notfall-Service</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="leistungen" class="py-24" style="background:#f8f9fb">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Was wir bieten</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 mb-4" style="color:#1e3a5f">Unsere Leistungen</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-lg">Von der kleinen Reparatur bis zum Großprojekt – wir beherrschen das gesamte Spektrum moderner Maurerarbeit.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up">
+<div class="text-5xl mb-5">🧱</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Neubau & Rohbau</h3>
+<p class="text-gray-500 leading-relaxed">Wir errichten Ihr Mauerwerk von Grund auf – präzise, termingerecht und nach den neuesten Standards. Ob Einfamilienhaus oder Gewerbegebäude: Jeder Stein sitzt perfekt.</p>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-1">
+<div class="text-5xl mb-5">🏗️</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Sanierung & Umbau</h3>
+<p class="text-gray-500 leading-relaxed">Alte Bausubstanz verdient fachkundige Hände. Wir sanieren, modernisieren und bauen um – mit Respekt vor dem Bestand und Blick für zeitgemäße Lösungen.</p>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-2">
+<div class="text-5xl mb-5">🏠</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Verputzarbeiten</h3>
+<p class="text-gray-500 leading-relaxed">Innen- und Außenputz vom Fachmann für ein makelloses Finish. Wir arbeiten mit hochwertigen Materialien und sorgen für glatte, langlebige Oberflächen.</p>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-3">
+<div class="text-5xl mb-5">🔨</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Betonarbeiten</h3>
+<p class="text-gray-500 leading-relaxed">Fundamente, Bodenplatten und Betonkonstruktionen aus einer Hand. Wir schaffen die solide Basis, auf der Ihr Bauvorhaben sicher steht.</p>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-4">
+<div class="text-5xl mb-5">🧰</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Abdichtungen & Drainage</h3>
+<p class="text-gray-500 leading-relaxed">Feuchte Keller und undichte Wände gehören der Vergangenheit an. Unsere professionellen Abdichtungslösungen schützen Ihr Gebäude nachhaltig vor Feuchtigkeit.</p>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-5">
+<div class="text-5xl mb-5">🏰</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Naturstein & Klinker</h3>
+<p class="text-gray-500 leading-relaxed">Edle Natursteinmauern und klassische Klinkerfassaden verleihen Ihrem Objekt Charakter. Wir verbinden traditionelle Handwerkskunst mit modernem Know-how.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24" style="background:#1e3a5f">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Unsere Stärken</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 text-white mb-4">Warum Maurer Sperfeld?</h2>
+<p class="text-white/60 max-w-2xl mx-auto text-lg">Drei Versprechen, die uns von anderen unterscheiden – und die wir jeden Tag aufs Neue einlösen.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-8">
+<div class="card-hover rounded-2xl p-10 fade-in-up" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1)">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background:rgba(224,123,57,0.15)">🤝</div>
+<h3 class="font-display text-2xl font-700 text-white mb-4">Zuverlässigkeit</h3>
+<p class="text-white/65 leading-relaxed">Wenn wir einen Termin nennen, dann halten wir ihn. Pünktlichkeit und Verlässlichkeit sind bei uns keine leeren Worte, sondern gelebte Praxis auf jeder Baustelle. Unsere Kunden wissen: Auf Maurer Sperfeld kann man sich verlassen – von der ersten Absprache bis zur finalen Abnahme. Das hat uns in über 15 Jahren den Ruf als zuverlässigster Maurerbetrieb der Region eingebracht.</p>
+</div>
+<div class="card-hover rounded-2xl p-10 fade-in-up delay-1" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1)">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background:rgba(224,123,57,0.15)">✨</div>
+<h3 class="font-display text-2xl font-700 text-white mb-4">Qualität</h3>
+<p class="text-white/65 leading-relaxed">Wir verwenden ausschließlich geprüfte, hochwertige Materialien und arbeiten nach den aktuellen DIN-Normen und Richtlinien. Jeder Handgriff sitzt, jede Fuge stimmt – denn Qualität zeigt sich im Detail. Unsere Meisterqualifikation ist dabei nicht nur ein Titel, sondern ein Versprechen: Mauerwerk, das Bestand hat und Generationen überdauert.</p>
+</div>
+<div class="card-hover rounded-2xl p-10 fade-in-up delay-2" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1)">
+<div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-6" style="background:rgba(224,123,57,0.15)">📍</div>
+<h3 class="font-display text-2xl font-700 text-white mb-4">Regionalität</h3>
+<p class="text-white/65 leading-relaxed">Als Stendaler Betrieb kennen wir die Bausubstanz der Region wie unsere Westentasche. Wir verstehen die besonderen Anforderungen der Altmark – von historischen Fachwerkhäusern bis zu modernen Neubauten. Kurze Wege, schnelle Reaktionszeiten und echte Verbundenheit mit unserer Heimat machen uns zum idealen Partner für Ihr Bauprojekt vor Ort.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-24" style="background:#f8f9fb">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">So arbeiten wir</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 mb-4" style="color:#1e3a5f">In 3 Schritten zum Ziel</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-lg">Unkompliziert, transparent und effizient – so kommen Sie zu Ihrem perfekten Ergebnis.</p>
+</div>
+<div class="grid lg:grid-cols-3 gap-8">
+<div class="card-hover text-center p-10 bg-white rounded-2xl border border-gray-100 fade-in-up">
+<div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-3xl font-800 text-white" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">1</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Kontaktaufnahme</h3>
+<p class="text-gray-500 leading-relaxed">Rufen Sie uns an oder schreiben Sie uns eine Nachricht. Schildern Sie uns Ihr Vorhaben – wir hören zu und stellen die richtigen Fragen. Innerhalb von 24 Stunden erhalten Sie eine erste Rückmeldung von uns.</p>
+</div>
+<div class="card-hover text-center p-10 bg-white rounded-2xl border border-gray-100 fade-in-up delay-1">
+<div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-3xl font-800 text-white" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">2</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Beratung & Angebot</h3>
+<p class="text-gray-500 leading-relaxed">Wir besichtigen die Baustelle vor Ort, beraten Sie umfassend zu Materialien und Methoden und erstellen ein transparentes, faires Angebot – ohne versteckte Kosten und mit klarer Zeitplanung.</p>
+</div>
+<div class="card-hover text-center p-10 bg-white rounded-2xl border border-gray-100 fade-in-up delay-2">
+<div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 font-display text-3xl font-800 text-white" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">3</div>
+<h3 class="font-display text-xl font-700 mb-3" style="color:#1e3a5f">Ausführung & Abnahme</h3>
+<p class="text-gray-500 leading-relaxed">Unser erfahrenes Team setzt Ihr Projekt termingerecht und sauber um. Nach Abschluss nehmen wir die Arbeiten gemeinsam ab und stellen sicher, dass Sie rundum zufrieden sind.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="ueber-uns" class="py-24 bg-white">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Wer wir sind</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 mb-4" style="color:#1e3a5f">Über Maurer Sperfeld</h2>
+</div>
+<div class="space-y-6 fade-in-up delay-1">
+<p class="text-gray-600 text-lg leading-relaxed">Maurer Sperfeld wurde 2009 in Stendal gegründet und hat sich seitdem als einer der führenden Maurerbetriebe in der Altmark etabliert. Was als kleiner Familienbetrieb begann, ist heute ein leistungsstarkes Unternehmen mit einem engagierten Team aus erfahrenen Fachkräften und Auszubildenden. Unser Gründer bringt seine Meisterqualifikation und jahrzehntelange Erfahrung in jedes einzelne Projekt ein – denn für uns ist jede Baustelle eine Herzensangelegenheit.</p>
+<p class="text-gray-600 text-lg leading-relaxed">Unser Anspruch ist es, traditionelles Maurerhandwerk mit modernen Techniken und Materialien zu verbinden. Wir bilden uns regelmäßig fort, investieren in zeitgemäße Ausrüstung und arbeiten stets nach den aktuellsten Baunormen. Dabei verlieren wir nie den persönlichen Kontakt zu unseren Kunden: Transparente Kommunikation, ehrliche Beratung und faire Preise sind die Grundpfeiler unserer Arbeit. Wir sind stolz darauf, dass der Großteil unserer Aufträge durch Empfehlungen zufriedener Kunden zustande kommt.</p>
+<p class="text-gray-600 text-lg leading-relaxed">Als tief in der Region verwurzelter Betrieb liegt uns die Altmark besonders am Herzen. Wir kennen die lokale Bausubstanz, die klimatischen Bedingungen und die besonderen Herausforderungen, die historische und moderne Gebäude in unserer Gegend mit sich bringen. Ob Sie ein denkmalgeschütztes Gebäude sanieren, ein neues Eigenheim errichten oder Ihren Gewerbebau erweitern möchten – bei Maurer Sperfeld sind Sie in den besten Händen. Überzeugen Sie sich selbst und werden Sie Teil unserer wachsenden Familie zufriedener Kunden.</p>
+</div>
+</div>
+</section>
+
+<section id="referenzen" class="py-24" style="background:#f8f9fb">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Kundenstimmen</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 mb-4" style="color:#1e3a5f">Das sagen unsere Kunden</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-lg">Ehrliche Bewertungen von Menschen, die uns ihr Zuhause anvertraut haben.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up">
+<div class="flex mb-4">
+<span style="color:#e07b39" class="text-xl">★★★★★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6">„Maurer Sperfeld hat unseren Rohbau in Rekordzeit fertiggestellt – und das in absoluter Top-Qualität. Die Kommunikation war jederzeit vorbildlich, das Team freundlich und professionell. Wir können diesen Betrieb uneingeschränkt weiterempfehlen!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a5080)">FM</div>
+<div class="ml-4">
+<p class="font-semibold" style="color:#1e3a5f">Familie Meier</p>
+<p class="text-gray-400 text-sm">Neubau in Stendal</p>
+</div>
+</div>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-1">
+<div class="flex mb-4">
+<span style="color:#e07b39" class="text-xl">★★★★★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6">„Unser feuchter Keller war ein Albtraum – bis Herr Sperfeld kam. Die Abdichtung wurde sauber und termingerecht durchgeführt, seitdem ist alles trocken. Faire Preise und hervorragende Arbeit, so muss Handwerk sein!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a5080)">TW</div>
+<div class="ml-4">
+<p class="font-semibold" style="color:#1e3a5f">Thomas Werner</p>
+<p class="text-gray-400 text-sm">Kellersanierung</p>
+</div>
+</div>
+</div>
+<div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 fade-in-up delay-2">
+<div class="flex mb-4">
+<span style="color:#e07b39" class="text-xl">★★★★★</span>
+</div>
+<p class="text-gray-600 leading-relaxed mb-6">„Als Bauträger arbeite ich seit Jahren mit Maurer Sperfeld zusammen. Die Zuverlässigkeit und Qualität sind außergewöhnlich – egal ob kleine Reparatur oder großes Bauprojekt. Ein Partner, auf den man sich blind verlassen kann!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg" style="background:linear-gradient(135deg,#1e3a5f,#2a5080)">SK</div>
+<div class="ml-4">
+<p class="font-semibold" style="color:#1e3a5f">Stefan Koch</p>
+<p class="text-gray-400 text-sm">Bauträger Altmark</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="kontakt" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16 fade-in-up">
+<p class="text-sm font-semibold tracking-widest uppercase mb-3" style="color:#e07b39">Sprechen Sie uns an</p>
+<h2 class="font-display text-4xl sm:text-5xl font-800 mb-4" style="color:#1e3a5f">Kontakt aufnehmen</h2>
+<p class="text-gray-500 max-w-2xl mx-auto text-lg">Wir freuen uns auf Ihr Projekt. Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<div class="fade-in-up">
+<div class="flex flex-col gap-6 mb-10">
+<a href="tel:+493401234567" class="card-hover flex items-center gap-5 p-6 rounded-2xl border border-gray-100" style="background:#f8f9fb">
+<div class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">📞</div>
+<div>
+<p class="font-semibold text-lg" style="color:#1e3a5f">Jetzt anrufen</p>
+<p class="text-gray-500">+49 340 1234567</p>
+</div>
+</a>
+<a href="mailto:info@maurer-sperfeld.de" class="card-hover flex items-center gap-5 p-6 rounded-2xl border border-gray-100" style="background:#f8f9fb">
+<div class="w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl flex-shrink-0" style="background:linear-gradient(135deg,#1e3a5f,#2a5080)">✉️</div>
+<div>
+<p class="font-semibold text-lg" style="color:#1e3a5f">E-Mail schreiben</p>
+<p class="text-gray-500">info@maurer-sperfeld.de</p>
+</div>
+</a>
+</div>
+<div class="p-8 rounded-2xl" style="background:linear-gradient(135deg,#1e3a5f,#152d4a)">
+<h3 class="font-display text-xl font-700 text-white mb-4">Bürozeiten</h3>
+<div class="space-y-2 text-white/70">
+<p>Montag – Freitag: 07:00 – 17:00 Uhr</p>
+<p>Samstag: 08:00 – 12:00 Uhr</p>
+<p>Sonntag: Geschlossen</p>
+<p class="pt-2" style="color:#e07b39">Notfälle: Rund um die Uhr erreichbar</p>
+</div>
+</div>
+</div>
+<div class="fade-in-up delay-1">
+<form class="space-y-5 p-8 rounded-2xl border border-gray-100" style="background:#f8f9fb">
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Name *</label>
+<input type="text" required placeholder="Ihr vollständiger Name" class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:outline-none focus:border-transparent transition-all text-gray-700" style="focus:ring-2;focus:ring-color:#e07b39" onfocus="this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.2)';this.style.borderColor='#e07b39'" onblur="this.style.boxShadow='none';this.style.borderColor='#e5e7eb'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Telefon *</label>
+<input type="tel" required placeholder="Ihre Telefonnummer" class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:outline-none transition-all text-gray-700" onfocus="this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.2)';this.style.borderColor='#e07b39'" onblur="this.style.boxShadow='none';this.style.borderColor='#e5e7eb'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">E-Mail *</label>
+<input type="email" required placeholder="Ihre E-Mail-Adresse" class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:outline-none transition-all text-gray-700" onfocus="this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.2)';this.style.borderColor='#e07b39'" onblur="this.style.boxShadow='none';this.style.borderColor='#e5e7eb'">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2" style="color:#1e3a5f">Ihre Nachricht *</label>
+<textarea rows="5" required placeholder="Beschreiben Sie Ihr Bauvorhaben..." class="w-full px-5 py-3.5 rounded-xl border border-gray-200 focus:outline-none transition-all text-gray-700 resize-none" onfocus="this.style.boxShadow='0 0 0 3px rgba(224,123,57,0.2)';this.style.borderColor='#e07b39'" onblur="this.style.boxShadow='none';this.style.borderColor='#e5e7eb'"></textarea>
+</div>
+<button type="submit" class="btn-hover w-full py-4 rounded-xl text-white font-semibold text-lg tracking-wide" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">Nachricht senden</button>
+<p class="text-gray-400 text-xs text-center">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="pt-16 pb-8" style="background:linear-gradient(135deg,#0f2337,#1e3a5f)">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-3 gap-12 mb-12">
+<div>
+<p class="font-display text-2xl font-bold mb-4" style="color:#e07b39">Maurer Sperfeld</p>
+<div class="space-y-2 text-white/60 text-sm">
+<p>Breite Straße 42</p>
+<p>39576 Stendal</p>
+<p>Sachsen-Anhalt, Deutschland</p>
+<p class="pt-2">Tel: +49 340 1234567</p>
+<p>E-Mail: info@maurer-sperfeld.de</p>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-white mb-4">Öffnungszeiten</h4>
+<div class="space-y-2 text-white/60 text-sm">
+<p>Montag – Freitag: 07:00 – 17:00</p>
+<p>Samstag: 08:00 – 12:00</p>
+<p>Sonntag: Geschlossen</p>
+<p class="pt-2" style="color:#e07b39">24h Notfall-Service verfügbar</p>
+</div>
+</div>
+<div>
+<h4 class="font-semibold text-white mb-4">Rechtliches</h4>
+<div class="space-y-2 text-sm">
+<a href="#" class="block text-white/60 hover:text-white transition-colors">Impressum</a>
+<a href="#" class="block text-white/60 hover:text-white transition-colors">Datenschutzerklärung</a>
+<a href="#" class="block text-white/60 hover:text-white transition-colors">AGB</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 text-center">
+<p class="text-white/40 text-sm">&copy; 2024 Maurer Sperfeld. Alle Rechte vorbehalten. Meisterbetrieb in Stendal.</p>
+</div>
+</div>
+</footer>
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<a href="https://wa.me/493401234567" target="_blank" class="floating-btn w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg" style="background:#25D366">💬</a>
+<a href="tel:+493401234567" class="floating-btn w-14 h-14 rounded-full flex items-center justify-center text-white text-2xl shadow-lg" style="background:linear-gradient(135deg,#e07b39,#c96a2f)">📞</a>
+</div>
+
+<script>
+const navbar=document.getElementById('navbar');window.addEventListener('scroll',()=>{navbar.classList.toggle('nav-scrolled',window.scrollY>50)});document.getElementById('mobile-toggle').addEventListener('click',()=>{document.getElementById('mobile-menu').classList.toggle('hidden')});document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('mobile-menu').classList.add('hidden')}));const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.style.animationPlayState='running'}})},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});document.querySelectorAll('.fade-in-up').forEach(el=>{el.style.animationPlayState='paused';observer.observe(el)});
+</script>
+</body>
+</html>
